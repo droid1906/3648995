@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Wok Week">
+<meta name="theme-color" content="#eaf0ec">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAG3klEQVR4Xu2drbIdRRSF51JUXROPR96KSGQQURSIRGAoXgBegAfhBZIXSGEQQUChECCDoCLxUAgEJgpEU8OkZ/p/7+79sz6bc05mer6z1u45995z88dff24AXPEOlgWkgBwAcoB2kBwAyQHaQXIAJAdoB8kBkBygHSQHQHKAdpAcAMkB2kFyACQHaAfJAZAcoB0kB0BygHaQHADJ0cX9h4+7nmeEG/z0+SVHLX599aORq90IauUC54Gxg+R4i5QWPsMDyfEWKQl8ZgnkANitVIPw2EFyXOBzwjhjVg6OKYHjNSVjU45wFUeuJcpl2yzKcXSCww8/WEuOsw0jfhRvntrGmhyXddDth/NysSbHthH74RmDctD64Tk8bMoBP0gwKwetHz6xLAehHz7Lxbgc8GME+3IQ+uENF3JQ+eGtXLzIkfKjFVcf2DqS49KP7punEVSvIwpfcpD44adc3MnB6ocxPMpxCUkvkLyIHJzKMf7hrYdycSoH1ebWNn7lGPfDfHi4lgN+5PEux7gfhoEco34YLhfI8R8j+xerfkCO/xnxwySQ4y26/TAZHpAjhtwPvUCOC7r94LsxvwTIcU2fH8bKBXIkofVDI5AjR58fZsoFchTo8MNMuUCOMh1+2AByVNHqh43wgBy1OPQDcjTQ6od2IEcbTX5oLxfI0YwfPyBHD05+7w1ydHL2o/WP6sv/PQbI0c+4H8KBHEPU+6HxnjrkoOeyLzTuXCDHKPWbF3VjLOQgoN4PXeUCOWio9ENXuUAOMir9UATkoKTGD0XhgW+HpKdmtxI9RuasiuSgpyY/jsg0Y9uQHGwU8+P+w8ditQigVhgp+iEc1Aoj52AQHhURkIOXow26zLD5BYDSCE6oMwMzB8iBWgFJIAdI8q7htXn5wd2cs3v60+s5/9FktN7nmHbhqdAokHQ51EnQimRpZMlBq8JnP/9Sc6n+efnh8WE3T3+oedaRF48etD4lgxxdFsvRZ0PlVS8SaTGoSJEXjx588ul7x4d98/XvxWctdGWBHPVCUElwScaMQEeEZHjz1cepf61RJDBZlHlyFJ2oUeGLbz8/LvGzJ8+L77w+M2j9yJgRuP3yu+NxFntqjiXscmScqLFhJ9JiUJFibBDKUTTj0o9KV1gt4brPQeVEIGNG+NfuCFHB/i46J8q+zhyW0CdHSoumnDiSN2On1Y9ieLTOHKnKG0+OM6neoVWEWI6zGd1O1BQKX7k0mVGsvKIf0cxRz9kSQj/I5LgMjHEzip3SnRw7g/c5isEWIi3jR7cZgcsUIVGERg6OwGhqltZOoaJoRmA/vEiRQS2OcEQI10BKy7Mnz4vRfQnfxeiD0IYJECQHd2xkIiQTGHwxnjmeFHOCjTw8dCRH62CRMSPUP9U7OB9pUaeog+WHfYo3+FjJmxGoeUwl+VSYkxmpsXQQguS4u3f7+u83g8ehmmAA1a19Ku7u3Q6+FIEcl4TwINnKamFaSETw5TRNraQk5TvuDDXzRM1jVJBa4fHYoPnVhN8+erivY6ZfJqfInN3KKjLvuqMW73//auQICbayRzm2LedHYKYl0u5zDFJM4igwxMkRqBlRZ1qimqIT23bdI4NycA2ku8IZS6Jzhis7NTYESGaLFFxy7NRYEjiviBNd6lU4ryorBDPHtsVjR56axsmjVJoOCSKacmKwU7aNPznOHM+wT5TKVZ7mUOXx9NEkBC3stZInOvM+V1KwXjM+FtoQsViOYmzS6iIQOSqckSVHvoOOqJNGsgQppMuRomatpwlUczAaodmttG5YADfjWxX8TTCQg+ZTWWASyAGSkMlBUnKABKprQSYHsAfkAPy1sm1kaQZGoOoUbGUBtrKgC+KZgzDTQAe0608sB7AEvRy08oJ6yFeeXg5gBhY5yBUGRTjWnEUOYAMuOThEBimYVptLDmAARjmYdAYRfOvMKAfQDq8cfFKDAOsK88rBffTOYTUDn8qCHOzJgfBggjs25iXHhDNxxZz1nJEcE0YnV8wxY15yAI3MSw4MHyRMi40FyTHz3OwxefWmJgeGjxEmm7EgOeBHH/PNWCYH5o8mlpixUg74UckqMxbLAT+KLDRjvRzwI8NaM0TIAT8uWW6GFDngR4QEM2i+b4WW6As6vCFEi8CCm2B5RK3OZKSduzg53FaMNDMk1soRJxUjUAuhtXJE7KoRIvkcyf6CMSsmI0SyFgEdcgTMKCJfC31yGFBEixZa5VCqiC4tdMuhSBGNWliQY0fgOKLXiR1NA2kRIYoY0MJUcpyZLIoZIY6YSo4UTKKYFMKdHCS5Yl6FMy6SA/Qh8VNZIATIAZJADgA5QDtIDoDkAO0gOQCSA7TzL304HdsfH4KXAAAAAElFTkSuQmCC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAG3klEQVR4Xu2drbIdRRSF51JUXROPR96KSGQQURSIRGAoXgBegAfhBZIXSGEQQUChECCDoCLxUAgEJgpEU8OkZ/p/7+79sz6bc05mer6z1u45995z88dff24AXPEOlgWkgBwAcoB2kBwAyQHaQXIAJAdoB8kBkBygHSQHQHKAdpAcAMkB2kFyACQHaAfJAZAcoB0kB0BygHaQHADJ0cX9h4+7nmeEG/z0+SVHLX599aORq90IauUC54Gxg+R4i5QWPsMDyfEWKQl8ZgnkANitVIPw2EFyXOBzwjhjVg6OKYHjNSVjU45wFUeuJcpl2yzKcXSCww8/WEuOsw0jfhRvntrGmhyXddDth/NysSbHthH74RmDctD64Tk8bMoBP0gwKwetHz6xLAehHz7Lxbgc8GME+3IQ+uENF3JQ+eGtXLzIkfKjFVcf2DqS49KP7punEVSvIwpfcpD44adc3MnB6ocxPMpxCUkvkLyIHJzKMf7hrYdycSoH1ebWNn7lGPfDfHi4lgN+5PEux7gfhoEco34YLhfI8R8j+xerfkCO/xnxwySQ4y26/TAZHpAjhtwPvUCOC7r94LsxvwTIcU2fH8bKBXIkofVDI5AjR58fZsoFchTo8MNMuUCOMh1+2AByVNHqh43wgBy1OPQDcjTQ6od2IEcbTX5oLxfI0YwfPyBHD05+7w1ydHL2o/WP6sv/PQbI0c+4H8KBHEPU+6HxnjrkoOeyLzTuXCDHKPWbF3VjLOQgoN4PXeUCOWio9ENXuUAOMir9UATkoKTGD0XhgW+HpKdmtxI9RuasiuSgpyY/jsg0Y9uQHGwU8+P+w8ditQigVhgp+iEc1Aoj52AQHhURkIOXow26zLD5BYDSCE6oMwMzB8iBWgFJIAdI8q7htXn5wd2cs3v60+s5/9FktN7nmHbhqdAokHQ51EnQimRpZMlBq8JnP/9Sc6n+efnh8WE3T3+oedaRF48etD4lgxxdFsvRZ0PlVS8SaTGoSJEXjx588ul7x4d98/XvxWctdGWBHPVCUElwScaMQEeEZHjz1cepf61RJDBZlHlyFJ2oUeGLbz8/LvGzJ8+L77w+M2j9yJgRuP3yu+NxFntqjiXscmScqLFhJ9JiUJFibBDKUTTj0o9KV1gt4brPQeVEIGNG+NfuCFHB/i46J8q+zhyW0CdHSoumnDiSN2On1Y9ieLTOHKnKG0+OM6neoVWEWI6zGd1O1BQKX7k0mVGsvKIf0cxRz9kSQj/I5LgMjHEzip3SnRw7g/c5isEWIi3jR7cZgcsUIVGERg6OwGhqltZOoaJoRmA/vEiRQS2OcEQI10BKy7Mnz4vRfQnfxeiD0IYJECQHd2xkIiQTGHwxnjmeFHOCjTw8dCRH62CRMSPUP9U7OB9pUaeog+WHfYo3+FjJmxGoeUwl+VSYkxmpsXQQguS4u3f7+u83g8ehmmAA1a19Ku7u3Q6+FIEcl4TwINnKamFaSETw5TRNraQk5TvuDDXzRM1jVJBa4fHYoPnVhN8+erivY6ZfJqfInN3KKjLvuqMW73//auQICbayRzm2LedHYKYl0u5zDFJM4igwxMkRqBlRZ1qimqIT23bdI4NycA2ku8IZS6Jzhis7NTYESGaLFFxy7NRYEjiviBNd6lU4ryorBDPHtsVjR56axsmjVJoOCSKacmKwU7aNPznOHM+wT5TKVZ7mUOXx9NEkBC3stZInOvM+V1KwXjM+FtoQsViOYmzS6iIQOSqckSVHvoOOqJNGsgQppMuRomatpwlUczAaodmttG5YADfjWxX8TTCQg+ZTWWASyAGSkMlBUnKABKprQSYHsAfkAPy1sm1kaQZGoOoUbGUBtrKgC+KZgzDTQAe0608sB7AEvRy08oJ6yFeeXg5gBhY5yBUGRTjWnEUOYAMuOThEBimYVptLDmAARjmYdAYRfOvMKAfQDq8cfFKDAOsK88rBffTOYTUDn8qCHOzJgfBggjs25iXHhDNxxZz1nJEcE0YnV8wxY15yAI3MSw4MHyRMi40FyTHz3OwxefWmJgeGjxEmm7EgOeBHH/PNWCYH5o8mlpixUg74UckqMxbLAT+KLDRjvRzwI8NaM0TIAT8uWW6GFDngR4QEM2i+b4WW6As6vCFEi8CCm2B5RK3OZKSduzg53FaMNDMk1soRJxUjUAuhtXJE7KoRIvkcyf6CMSsmI0SyFgEdcgTMKCJfC31yGFBEixZa5VCqiC4tdMuhSBGNWliQY0fgOKLXiR1NA2kRIYoY0MJUcpyZLIoZIY6YSo4UTKKYFMKdHCS5Yl6FMy6SA/Qh8VNZIATIAZJADgA5QDtIDoDkAO0gOQCSA7TzL304HdsfH4KXAAAAAElFTkSuQmCC">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Wok Week</title>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: phone-first app shell — sticky header, one scrolling view, fixed bottom tab bar. Celadon paper, ink text, chili accent. */
+:root{
+  --bg:#eaf0ec; --surface:#ffffff; --sunk:#dde6e0; --ink:#16212a; --muted:#5a6a6c; --line:#cfd9d3;
+  --accent:#c8361d; --accent-ink:#ffffff; --leaf:#2d6a4c; --leaf-soft:#d3e8dc;
+  --display:"Dela Gothic One", "Arial Black", system-ui, sans-serif;
+  --body:"Zen Kaku Gothic New", "Hiragino Sans", system-ui, -apple-system, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10171a; --surface:#182126; --sunk:#0c1214; --ink:#e6ece9; --muted:#93a29f; --line:#28353a;
+  --accent:#ff6b4e; --accent-ink:#1a0a06; --leaf:#74c49b; --leaf-soft:#1e3a2d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10171a; --surface:#182126; --sunk:#0c1214; --ink:#e6ece9; --muted:#93a29f; --line:#28353a;
+  --accent:#ff6b4e; --accent-ink:#1a0a06; --leaf:#74c49b; --leaf-soft:#1e3a2d; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+*{-webkit-tap-highlight-color:transparent}
+button{touch-action:manipulation}
+input,textarea,select{font-size:16px!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.brand{font-family:var(--display);font-size:22px;letter-spacing:.01em;line-height:1}
+.brand span{color:var(--accent)}
+.sync{font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+main{padding-block:16px calc(96px + env(safe-area-inset-bottom,0px))}
+main,.scrim{overscroll-behavior:contain}
+h2{font-family:var(--display);font-size:20px;font-weight:400;margin:0;text-wrap:balance}
+.lede{color:var(--muted);margin:4px 0 0;font-size:14px}
+.section{display:flex;flex-direction:column;gap:14px}
+.stats{display:flex;gap:8px;flex-wrap:wrap}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;display:flex;gap:6px;align-items:baseline}
+.stat b{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums}
+.note{background:var(--leaf-soft);color:var(--ink);border-radius:var(--r);padding:10px 14px;font-size:13px}
+/* week */
+.days{display:flex;flex-direction:column;gap:10px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px;display:grid;grid-template-columns:48px 1fr;gap:10px;align-items:start}
+.day.today{border-color:var(--accent)}
+.dname{font-family:var(--display);font-size:15px;line-height:1.2;padding-top:6px}
+.dname small{display:block;font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.06em}
+.slots{display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:0}
+.slot{min-width:0;text-align:left;background:var(--sunk);border:1px dashed var(--line);border-radius:10px;padding:8px 10px;display:flex;flex-direction:column;gap:2px;min-height:58px}
+.slot .lbl{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.slot .meal{font-weight:700;font-size:14px;line-height:1.25;overflow-wrap:anywhere}
+.slot.filled{background:var(--surface);border-style:solid}
+.slot.left .meal{color:var(--leaf)}
+.slot.empty .meal{color:var(--muted);font-weight:500}
+/* buttons */
+.btn{border:0;border-radius:999px;padding:10px 16px;font-weight:700;background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.small{padding:6px 12px;font-size:13px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+/* chips */
+.search{width:100%;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:10px 16px;-webkit-appearance:none;appearance:none}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:13px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+/* recipe list */
+.rlist{display:flex;flex-direction:column;gap:8px}
+.rcard{text-align:left;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 14px 10px 10px;display:grid;grid-template-columns:68px 1fr auto;gap:12px;align-items:center}
+.rbody{display:flex;flex-direction:column;gap:3px;min-width:0}
+.thumb{display:block;aspect-ratio:4/3;max-width:100%;border-radius:10px;overflow:hidden;background:var(--sunk)}
+.thumb svg,.thumb img{display:block;width:100%;height:100%;object-fit:cover}
+.hero{border-radius:16px;overflow:hidden;background:var(--sunk);aspect-ratio:4/3;max-height:260px;width:100%;max-width:100%;display:flex;align-items:center;justify-content:center}
+.hero svg{width:82%;height:auto}
+.hero img{width:100%;height:100%;object-fit:cover}
+.facts{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 4px;text-align:center;min-width:0}
+.fact b{display:block;font-family:var(--mono);font-weight:500;font-size:14px;font-variant-numeric:tabular-nums}
+.fact span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag.veg{color:var(--leaf);border-color:var(--leaf)}
+.minis{display:flex;gap:3px;margin-top:4px}
+.mini{width:30px;flex:none}
+.slot .cost{font-family:var(--mono);font-size:10px;color:var(--muted)}
+.pick{align-items:center}
+.pick .pname{flex:1;min-width:0}
+.pick .pthumb{width:44px;flex:none}
+.pick.on{border-color:var(--leaf);background:var(--leaf-soft)}
+.pick.on .pname::before{content:"✓ ";color:var(--leaf);font-weight:700}
+.ghead{margin:4px 0 0;font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
+.combo-bar{flex:none;background:var(--surface);border-top:1px solid var(--line);padding:12px max(16px,env(safe-area-inset-right,0px)) calc(14px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;gap:12px;align-items:center;justify-content:space-between}
+.combo-bar .what{min-width:0;font-weight:700;font-size:14px;overflow-wrap:anywhere}
+.photo-btn{position:relative;overflow:hidden}
+.photo-btn input{position:absolute;inset:0;opacity:0;cursor:pointer}
+@media (max-width:340px){.facts{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:390px){.fact span{font-size:9px;letter-spacing:.03em}}
+.rcard h3{margin:0;font-size:16px;line-height:1.3;min-width:0}
+.meta{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.price{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:15px;grid-row:span 2}
+/* lists */
+.group h4{margin:6px 0;font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
+.items{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.items li{display:flex;align-items:center;gap:10px;padding:8px 4px 8px 12px;min-height:48px;border-top:1px solid var(--line)}
+.items li:first-child{border-top:0}
+.items label{flex:1;display:flex;gap:10px;align-items:center;min-width:0;cursor:pointer}
+.items input[type=checkbox]{width:22px;height:22px;accent-color:var(--leaf);flex:none}
+.items .txt{min-width:0;overflow-wrap:anywhere}
+.items .sub{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.items li.done .txt{text-decoration:line-through;color:var(--muted)}
+.x{border:0;background:none;color:var(--muted);font-size:22px;line-height:1;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;margin:-8px -10px -8px 0;flex:none}
+.add{display:flex;gap:8px}
+.add input{flex:1;min-width:0;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 14px}
+.empty-state{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:20px;text-align:center;color:var(--muted)}
+/* tabs */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+nav.tabs .in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+/* stores */
+.scard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.scard.fav{border-color:var(--leaf)}
+.shead{display:flex;justify-content:space-between;gap:10px;align-items:start}
+.shead h3{margin:0;font-size:16px;line-height:1.3}
+.star{border:0;background:none;font-size:22px;line-height:1;color:var(--muted);min-width:44px;min-height:44px;margin:-10px -10px 0 0;flex:none}
+.star[aria-pressed="true"]{color:var(--leaf)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted)}
+.tag.asian{color:var(--accent);border-color:var(--accent)}
+.cover{display:flex;align-items:center;gap:10px;font-size:13px}
+.bar{flex:1;height:6px;background:var(--sunk);border-radius:999px;overflow:hidden;min-width:60px}
+.bar i{display:block;height:100%;background:var(--leaf);border-radius:999px}
+.cover b{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums}
+.scard p{margin:0;font-size:13px;color:var(--muted)}
+.link{color:var(--accent);font-weight:700;text-decoration:none;font-size:13px}
+.where{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 14px;display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left;width:100%;font-size:13px}
+.where b{font-weight:700}
+nav.tabs button{border:0;background:none;padding:10px 4px 12px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;color:var(--muted);font-weight:500}
+nav.tabs svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav.tabs button[aria-current="page"]{color:var(--accent)}
+nav.tabs .badge{font-family:var(--mono);font-size:10px}
+/* sheet */
+.scrim{position:fixed;inset:0;background:rgb(0 0 0 / .45);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.sheet-wrap{width:100%;max-width:640px;max-height:calc(100% - env(safe-area-inset-top,0px) - 24px);display:flex;flex-direction:column;border-radius:20px 20px 0 0;overflow:hidden;background:var(--bg)}
+.sheet{background:var(--bg);width:100%;flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-block:18px calc(24px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:14px}
+.sheet-head{display:flex;justify-content:space-between;gap:12px;align-items:start}
+.sheet>*{flex-shrink:0}
+.sheet ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px}
+.ing{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+.ing li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dotted var(--line);padding:4px 0}
+.ing .q{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right;flex:none}
+.have{color:var(--leaf);font-weight:700}
+.picks{display:flex;flex-direction:column;gap:6px}
+.pick{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:10px 12px;display:flex;justify-content:space-between;gap:10px}
+.pick.special{background:var(--sunk)}
+form.f{display:flex;flex-direction:column;gap:10px}
+form.f label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+form.f input,form.f textarea,form.f select{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:9px 12px;color:var(--ink)}
+form.f .two{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+@media (max-width:340px){.slots{grid-template-columns:1fr}}
+@media (max-width:390px){.day{grid-template-columns:40px 1fr;gap:8px;padding:10px}.dname{font-size:14px}.slot{padding:7px 8px}.slot .meal{font-size:13px}.mini{width:26px}.facts{gap:4px}.fact b{font-size:13px}}
+@media (prefers-reduced-motion:no-preference){.sheet-wrap{animation:up .22s ease-out}@keyframes up{from{transform:translateY(24px);opacity:.6}}}
+</style>
+</head><body>
+
+
+<header class="top"><div class="wrap">
+  <div class="brand">Wok<span>·</span>Week</div>
+  <div class="sync" id="sync">Local</div>
+</div></header>
+
+<main class="wrap" id="view"></main>
+
+<nav class="tabs" aria-label="Sections"><div class="in">
+  <button data-tab="week"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Week</button>
+  <button data-tab="recipes"><svg viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 0 1-18 0Z"/><path d="M8 8c0-2 2-2 2-4M13 8c0-2 2-2 2-4"/></svg>Recipes</button>
+  <button data-tab="pantry"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M5 9h14M5 15h14"/></svg>Pantry</button>
+  <button data-tab="shop"><svg viewBox="0 0 24 24"><path d="M5 7h14l-1.5 12h-11Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span>Shop <span class="badge" id="shopBadge"></span></span></button>
+  <button data-tab="stores"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Stores</button>
+</div></nav>
+
+<div id="sheetRoot"></div>
+
+<script>
+(function(){
+const DAYS=[["mon","Mon"],["tue","Tue"],["wed","Wed"],["thu","Thu"],["fri","Fri"],["sat","Sat"],["sun","Sun"]];
+const CAT={v:"Fresh produce",f:"Fridge & freezer",d:"Rice, noodles & tins",s:"Sauces & spices",o:"Other"};
+// ingredient: "qty|name|cat"
+const BASE=[
+ {id:"egg-fried-rice",name:"Egg fried rice",cu:"China",min:15,cost:0.9,ing:["1 cup, cooked|rice|d","2|eggs|f","1 handful|frozen peas & carrots|f","2|spring onions|v","1 clove|garlic|v","1 tbsp|soy sauce|s","1 tsp|sesame oil|s"],steps:["Use rice cooked the day before; fresh rice goes mushy.","Scramble the eggs in a hot oiled pan, then push them aside.","Add garlic and the frozen veg, stir 2 minutes.","Add rice, break up clumps, fry 3–4 minutes until it crackles.","Season with soy sauce and sesame oil, top with spring onions."]},
+ {id:"tofu-stir-fry",name:"Tofu & broccoli stir-fry",cu:"China",min:20,cost:1.6,ing:["200 g|firm tofu|f","1 small head|broccoli|v","1|carrot|v","2 cloves|garlic|v","1 thumb|ginger|v","2 tbsp|soy sauce|s","1 tsp|cornstarch|s","1 cup, raw|rice|d"],steps:["Start the rice.","Press the tofu dry, cube it and toss in cornstarch.","Fry tofu until golden on all sides, set aside.","Stir-fry broccoli and sliced carrot 3 minutes with garlic and ginger.","Return tofu, add soy sauce and a splash of water, toss and serve over rice."]},
+ {id:"miso-noodle-soup",name:"Miso noodle soup",cu:"Japan",min:15,cost:1.4,ing:["1 portion|noodles|d","1 tbsp|miso paste|s","1|eggs|f","1 handful|spinach|v","4|mushrooms|v","1|spring onions|v"],steps:["Boil the egg 6½ minutes, then cool it in cold water.","Simmer sliced mushrooms in 500 ml water for 5 minutes.","Cook the noodles in the broth, add spinach at the end.","Turn off the heat and stir in miso (boiling kills the flavour).","Top with the halved egg and spring onions."]},
+ {id:"red-lentil-dal",name:"Red lentil dal",cu:"India",min:30,cost:0.8,ing:["1 cup|red lentils|d","1|onion|v","2 cloves|garlic|v","1 thumb|ginger|v","1 tin|chopped tomatoes|d","1 tbsp|curry powder|s","1 tsp|turmeric|s","1 cup, raw|rice|d"],steps:["Soften diced onion in oil, add garlic, ginger and spices for 1 minute.","Add rinsed lentils, tomatoes and 750 ml water.","Simmer 20 minutes, stirring now and then, until thick.","Salt to taste. Makes 3–4 portions, so plan leftovers."]},
+ {id:"chickpea-curry",name:"Chickpea coconut curry",cu:"India",min:25,cost:1.1,ing:["1 tin|chickpeas|d","1 tin|coconut milk|d","1|onion|v","2 cloves|garlic|v","1 tbsp|curry powder|s","2 handfuls|spinach|v","1 cup, raw|rice|d"],steps:["Fry onion until soft, add garlic and curry powder.","Add drained chickpeas and coconut milk, simmer 15 minutes.","Stir in spinach until wilted, salt to taste, serve with rice."]},
+ {id:"teriyaki-chicken",name:"Teriyaki chicken bowl",cu:"Japan",min:25,cost:2.2,ing:["2|chicken thighs|f","3 tbsp|soy sauce|s","1 tbsp|honey|s","1 tbsp|rice vinegar|s","1 thumb|ginger|v","1 cup, raw|rice|d","½ head|broccoli|v"],steps:["Start the rice and steam the broccoli.","Pan-fry thighs skin side down 8 minutes, flip, cook 5 more.","Mix soy, honey, vinegar and grated ginger, pour into the pan.","Reduce until sticky, slice the chicken and serve over rice."]},
+ {id:"gochujang-tofu",name:"Gochujang tofu bowl",cu:"Korea",min:20,cost:1.7,ing:["200 g|firm tofu|f","1 tbsp|gochujang|s","1 tbsp|soy sauce|s","1 tsp|sesame oil|s","1 cup, raw|rice|d","1|carrot|v","½|cucumber|v"],steps:["Start the rice.","Fry cubed tofu until crisp.","Mix gochujang, soy, sesame oil and a spoon of water; toss tofu in it.","Serve on rice with grated carrot and sliced cucumber."]},
+ {id:"gyoza-plate",name:"Crispy gyoza & slaw",cu:"Japan",min:12,cost:2.0,ing:["10|frozen gyoza|f","¼|cabbage|v","1 tbsp|rice vinegar|s","1 tbsp|soy sauce|s","1 tsp|chili oil|s"],steps:["Fry gyoza flat side down in oil 2 minutes.","Add 50 ml water, cover, steam 5 minutes until dry.","Toss shredded cabbage with vinegar and a pinch of salt.","Dip in soy sauce mixed with chili oil."]},
+ {id:"peanut-noodles",name:"Peanut lime noodles",cu:"Thailand",min:15,cost:1.3,ing:["1 portion|noodles|d","2 tbsp|peanut butter|s","1 tbsp|soy sauce|s","½|lime|v","1|carrot|v","½|cucumber|v","1|spring onions|v"],steps:["Cook the noodles and rinse in cold water.","Whisk peanut butter, soy, lime juice and hot water into a sauce.","Toss with noodles, grated carrot and cucumber, top with spring onions. Good cold for lunch."]},
+ {id:"oyakodon",name:"Oyakodon (chicken & egg rice)",cu:"Japan",min:20,cost:1.9,ing:["1|chicken thighs|f","2|eggs|f","½|onion|v","2 tbsp|soy sauce|s","1 tsp|honey|s","1 cup, raw|rice|d"],steps:["Start the rice.","Simmer sliced onion in 100 ml water with soy and honey for 3 minutes.","Add bite-size chicken, cook 5 minutes.","Pour beaten eggs over, cover 1 minute until just set, slide onto rice."]},
+ {id:"kimchi-fried-rice",name:"Kimchi fried rice",cu:"Korea",min:15,cost:1.5,ing:["1 cup, cooked|rice|d","½ cup|kimchi|f","1|eggs|f","1 tsp|gochujang|s","1 tsp|sesame oil|s","1|spring onions|v"],steps:["Fry chopped kimchi 2 minutes.","Add day-old rice and gochujang, fry until hot.","Finish with sesame oil, top with a fried egg and spring onions."]},
+ {id:"mapo-tofu",name:"Mapo tofu",cu:"China",min:25,cost:1.6,ing:["300 g|soft tofu|f","100 g|minced pork|f","1 tbsp|doubanjiang|s","2 cloves|garlic|v","1 thumb|ginger|v","1|spring onions|v","1 tsp|cornstarch|s","1 cup, raw|rice|d"],steps:["Start the rice.","Brown the pork, add garlic, ginger and doubanjiang.","Add 150 ml water and cubed tofu, simmer gently 5 minutes.","Thicken with cornstarch mixed in water, top with spring onions."]},
+ {id:"miso-soup",side:true,name:"Miso soup",cu:"Japan",min:8,cost:0.5,ing:["1 tbsp|miso paste|s","50 g|soft tofu|f","1 pinch|dried wakame|d","1|spring onions|v"],steps:["Soak the wakame in water for 5 minutes.","Heat 300 ml water until just simmering, add cubed tofu and wakame.","Turn off the heat, dissolve the miso in a ladle of broth, stir it back in.","Top with spring onions. Never boil after adding miso."]},
+ {id:"jammy-egg",side:true,name:"Soy-marinated jammy egg",cu:"Japan",min:10,cost:0.35,ing:["1|eggs|f","1 tbsp|soy sauce|s","1 tsp|honey|s"],steps:["Lower the egg into boiling water for 6½ minutes.","Cool in cold water and peel.","Soak in soy sauce, honey and 1 tbsp water for at least 30 minutes (overnight is best). Make several at once."]},
+ {id:"steamed-rice",side:true,name:"Steamed rice",cu:"Japan",min:20,cost:0.15,ing:["½ cup, raw|rice|d"],steps:["Rinse the rice until the water runs almost clear.","Add 1.2× the volume of water, bring to a boil.","Cover, lowest heat for 12 minutes, then rest 10 minutes off the heat."]},
+ {id:"smashed-cucumber",side:true,name:"Smashed cucumber salad",cu:"China",min:5,cost:0.5,ing:["½|cucumber|v","1 clove|garlic|v","1 tsp|rice vinegar|s","1 tsp|soy sauce|s","½ tsp|chili oil|s"],steps:["Smash the cucumber with the flat of a knife and cut into chunks.","Salt it and leave 5 minutes, then drain.","Toss with grated garlic, vinegar, soy sauce and chili oil."]},
+ {id:"edamame",side:true,name:"Salted edamame",cu:"Japan",min:5,cost:0.8,ing:["150 g|frozen edamame|f"],steps:["Boil the frozen edamame 4 minutes.","Drain and toss with coarse salt. Eat warm or cold."]}
+];
+const META={
+ "egg-fried-rice":{kcal:480,p:18,veg:1,keep:2,tip:"Freeze leftover rice in portions so you can make this any day.",art:{t:"bowl",b:"#e9c46a",tp:[["dot","#7cb342",6],["dot","#f08a24",5],["chunk","#f7d774",4],["ring","#5aa64a",5]]}},
+ "tofu-stir-fry":{kcal:520,p:24,veg:1,keep:3,tip:"Pressing the tofu for 10 minutes under a heavy pan makes it much crispier.",art:{t:"plate",b:"#f4efe2",tp:[["cube","#e8c98a",6],["chunk","#3f8f3a",6],["strip","#ee7f2d",4]]}},
+ "miso-noodle-soup":{kcal:450,p:20,veg:1,keep:1,tip:"Cook the noodles separately if you want to keep some soup for later.",art:{t:"soup",b:"#d6a560",tp:[["strip","#f3df9a",8],["leaf","#3e8e41",4],["chunk","#8a6a4a",3],["egg","#f4a52a",1],["ring","#6cbf4f",5]]}},
+ "red-lentil-dal":{kcal:520,p:24,veg:1,keep:4,tip:"Cheapest protein on the list. A double batch freezes well for busy weeks.",art:{t:"soup",b:"#e2a33b",tp:[["dot","#c0392b",5],["dot","#f5d27a",4],["leaf","#4caf50",4]]}},
+ "chickpea-curry":{kcal:650,p:18,veg:1,keep:4,tip:"Use light coconut milk to cut calories, or half a tin and top up with water.",art:{t:"soup",b:"#e8b552",tp:[["dot","#d9b36c",12],["leaf","#2e7d32",4]]}},
+ "teriyaki-chicken":{kcal:650,p:38,veg:0,keep:3,tip:"Thighs are cheaper and juicier than breast and don't dry out.",art:{t:"bowl",b:"#f5f1e6",tp:[["chunk","#8b4513",6],["chunk","#3f8f3a",4],["dot","#f3ead0",6]]}},
+ "gochujang-tofu":{kcal:540,p:22,veg:1,keep:3,tip:"A tub of gochujang lasts months in the fridge and lifts eggs, rice and noodles too.",art:{t:"bowl",b:"#f5f1e6",tp:[["cube","#c9452b",6],["strip","#ee7f2d",5],["chunk","#7fb069",4]]}},
+ "gyoza-plate":{kcal:420,p:16,veg:0,keep:1,tip:"A big bag of frozen gyoza from an Asian supermarket is much cheaper than small packs.",art:{t:"plate",b:"#dfe8c4",tp:[["crescent","#e9c88e",5],["strip","#b5cf7a",6]]}},
+ "peanut-noodles":{kcal:560,p:18,veg:1,keep:2,tip:"Make it in the evening and take it to class cold the next day.",art:{t:"bowl",b:"#d8a25a",tp:[["strip","#f0d48a",8],["strip","#ee7f2d",4],["strip","#7fb069",4],["ring","#5aa64a",4]]}},
+ "oyakodon":{kcal:620,p:36,veg:0,keep:1,tip:"Take it off the heat while the egg is still a little runny; it keeps cooking.",art:{t:"bowl",b:"#f2d06b",tp:[["chunk","#c98b4e",5],["strip","#f5e6b0",4],["ring","#5aa64a",5]]}},
+ "kimchi-fried-rice":{kcal:450,p:14,veg:0,keep:2,tip:"Older, sourer kimchi is best here. Kimchi often contains fish sauce.",art:{t:"bowl",b:"#d9622f",tp:[["leaf","#b8401f",5],["egg","#f4a52a",1],["ring","#5aa64a",5]]}},
+ "mapo-tofu":{kcal:600,p:30,veg:0,keep:3,tip:"Leave out the pork and add mushrooms for a vegetarian version.",art:{t:"soup",b:"#b8331f",tp:[["cube","#f3ead2",8],["dot","#5a2a1a",8],["ring","#5aa64a",5]]}},
+ "miso-soup":{kcal:60,p:4,veg:1,keep:1,short:"Miso soup",tip:"Miso paste keeps for months in the fridge. One tub makes about 30 bowls.",art:{t:"small",b:"#d9a35b",tp:[["cube","#f3ead2",4],["leaf","#2f5d3a",4],["ring","#6cbf4f",4]]}},
+ "jammy-egg":{kcal:90,p:7,veg:1,keep:3,short:"Jammy egg",tip:"Cook 4–6 at once. They keep 3 days in the marinade.",art:{t:"plate",b:"#f5f1e6",tp:[["egg","#f39c12",2]]}},
+ "steamed-rice":{kcal:200,p:4,veg:1,keep:3,short:"Rice",tip:"Cook a big pot every few days and keep portions in the fridge.",art:{t:"small",b:"#f7f4ec",tp:[["dot","#ffffff",8]]}},
+ "smashed-cucumber":{kcal:50,p:1,veg:1,keep:1,short:"Cucumber salad",tip:"Fresh and crunchy next to heavy curries and fried rice.",art:{t:"small",b:"#cfe3b0",tp:[["chunk","#5d9b4a",6],["dot","#c0392b",5]]}},
+ "edamame":{kcal:120,p:11,veg:1,keep:2,short:"Edamame",tip:"Frozen edamame is a cheap way to add protein to any meal.",art:{t:"small",b:"#e8efd8",tp:[["leaf","#6aa84f",9]]}}
+};
+const MORE=[{"id":"tomato-egg","name":"Tomato & egg stir-fry","cu":"China","min":15,"cost":0.9,"ing":["2|eggs|f","2|tomatoes|v","1|spring onions|v","1 tsp|sugar|s","1 tsp|soy sauce|s","1 cup, raw|rice|d"],"steps":["Start the rice.","Scramble the eggs softly and take them out.","Fry tomato wedges until juicy, add sugar and soy sauce.","Fold the eggs back in, top with spring onions."]},{"id":"dan-dan-noodles","name":"Dan dan noodles","cu":"China","min":20,"cost":1.6,"ing":["1 portion|noodles|d","100 g|minced pork|f","1 tbsp|peanut butter|s","1 tbsp|chili oil|s","1 tbsp|soy sauce|s","1 clove|garlic|v","1 handful|spinach|v"],"steps":["Fry the pork until crisp with a splash of soy sauce.","Mix peanut butter, chili oil, soy sauce, garlic and 3 tbsp hot water in the bowl.","Cook noodles and spinach, drain, toss in the sauce, top with pork."]},{"id":"kung-pao-chicken","name":"Kung pao chicken","cu":"China","min":25,"cost":2.1,"ing":["2|chicken thighs|f","1 handful|peanuts|d","1|bell pepper|v","2 cloves|garlic|v","1 thumb|ginger|v","2 tbsp|soy sauce|s","1 tbsp|rice vinegar|s","1 tsp|sugar|s","1 tsp|cornstarch|s","1 pinch|chili flakes|s","1 cup, raw|rice|d"],"steps":["Start the rice. Dice the chicken and toss with cornstarch and a little soy sauce.","Fry chicken until golden, add chili, garlic, ginger and pepper.","Add soy, vinegar, sugar and a splash of water, reduce.","Stir in peanuts and serve."]},{"id":"hot-sour-soup","name":"Hot & sour soup","cu":"China","min":20,"cost":1.2,"ing":["100 g|firm tofu|f","4|mushrooms|v","1|eggs|f","2 tbsp|rice vinegar|s","1 tbsp|soy sauce|s","1 tbsp|cornstarch|s","1 tsp|black pepper|s","1|spring onions|v"],"steps":["Simmer sliced mushrooms and tofu strips in 500 ml water with soy sauce.","Thicken with cornstarch mixed in water.","Drizzle in the beaten egg while stirring.","Off the heat add vinegar and lots of pepper."]},{"id":"veg-chow-mein","name":"Vegetable chow mein","cu":"China","min":20,"cost":1.3,"ing":["1 portion|noodles|d","¼|cabbage|v","1|carrot|v","1 handful|bean sprouts|v","2 tbsp|soy sauce|s","1 tsp|sugar|s","1 tsp|sesame oil|s"],"steps":["Cook the noodles, rinse, toss with sesame oil.","Stir-fry shredded cabbage and carrot on high heat 2 minutes.","Add noodles, soy sauce and sugar, toss until hot.","Add bean sprouts last."]},{"id":"sweet-sour-chicken","name":"Sweet & sour chicken","cu":"China","min":30,"cost":2.0,"ing":["2|chicken thighs|f","1|bell pepper|v","½|onion|v","½ tin|tinned pineapple|d","2 tbsp|ketchup|s","1 tbsp|rice vinegar|s","1 tbsp|sugar|s","1 tbsp|cornstarch|s","1 cup, raw|rice|d"],"steps":["Start the rice. Coat diced chicken in cornstarch and fry until crisp.","Fry pepper and onion 2 minutes.","Add ketchup, vinegar, sugar and some pineapple juice, simmer to a glaze.","Toss in chicken and pineapple."]},{"id":"chicken-congee","name":"Chicken congee","cu":"China","min":60,"cost":0.9,"ing":["½ cup|rice|d","1|chicken thighs|f","1 thumb|ginger|v","1|spring onions|v","1 tbsp|soy sauce|s","1 tsp|sesame oil|s"],"steps":["Simmer rice, chicken and sliced ginger in 1.5 l water, stirring sometimes, for 50 minutes.","Shred the chicken back into the pot.","Season with salt, top with spring onions, soy sauce and sesame oil."]},{"id":"scallion-pancakes","name":"Scallion pancakes","cu":"China","min":30,"cost":0.4,"ing":["1 cup|flour|d","3|spring onions|v","1 tbsp|sesame oil|s","1 tbsp|soy sauce|s"],"steps":["Mix flour with 120 ml hot water into a soft dough, rest 15 minutes.","Roll thin, brush with sesame oil, scatter spring onions and salt, roll up and coil.","Flatten again and pan-fry 3 minutes per side.","Dip in soy sauce."]},{"id":"red-braised-tofu","name":"Red-braised tofu","cu":"China","min":25,"cost":1.4,"ing":["300 g|firm tofu|f","2 tbsp|soy sauce|s","1 tbsp|sugar|s","1 thumb|ginger|v","2 cloves|garlic|v","1|spring onions|v","1 cup, raw|rice|d"],"steps":["Start the rice. Fry tofu slices until golden.","Melt sugar in the pan until amber, add garlic and ginger.","Add soy sauce and 100 ml water, return tofu, simmer 10 minutes until glossy."]},{"id":"yuxiang-aubergine","name":"Fish-fragrant aubergine","cu":"China","min":25,"cost":1.3,"ing":["1|aubergine|v","2 cloves|garlic|v","1 thumb|ginger|v","1 tbsp|doubanjiang|s","1 tbsp|soy sauce|s","1 tbsp|rice vinegar|s","1 tsp|sugar|s","1 tsp|cornstarch|s","1 cup, raw|rice|d"],"steps":["Start the rice. Cut aubergine into fingers and fry until soft.","Push aside, fry garlic, ginger and doubanjiang.","Add soy, vinegar, sugar and cornstarch in 80 ml water, toss until glossy."]},{"id":"pork-dumplings","name":"Pork & cabbage dumplings","cu":"China","min":60,"cost":0.9,"ing":["1 cup|flour|d","120 g|minced pork|f","¼|cabbage|v","1 thumb|ginger|v","1 tbsp|soy sauce|s","1 tsp|sesame oil|s"],"steps":["Make a dough of flour and 100 ml water, rest 20 minutes.","Mix pork, finely chopped salted cabbage, ginger, soy and sesame oil.","Roll small circles, fill and pinch shut.","Boil 5 minutes or pan-fry then steam."]},{"id":"oyster-chicken-broccoli","name":"Chicken & broccoli in oyster sauce","cu":"China","min":20,"cost":1.9,"ing":["2|chicken thighs|f","1 small head|broccoli|v","2 tbsp|oyster sauce|s","2 cloves|garlic|v","1 tsp|cornstarch|s","1 cup, raw|rice|d"],"steps":["Start the rice. Slice chicken and toss with cornstarch.","Fry chicken until cooked, take out.","Stir-fry broccoli with garlic and a splash of water, covered, 3 minutes.","Return chicken with oyster sauce and toss."]},{"id":"zhajiangmian","name":"Zha jiang noodles","cu":"China","min":20,"cost":1.5,"ing":["1 portion|noodles|d","100 g|minced pork|f","2 tbsp|hoisin sauce|s","1 tbsp|soy sauce|s","½|cucumber|v","1 clove|garlic|v"],"steps":["Fry the pork until browned with garlic.","Add hoisin, soy and 3 tbsp water, simmer 5 minutes.","Spoon over cooked noodles and top with cucumber matchsticks."]},{"id":"sichuan-cold-noodles","name":"Sichuan cold noodles","cu":"China","min":15,"cost":0.9,"ing":["1 portion|noodles|d","1 tbsp|chili oil|s","1 tbsp|soy sauce|s","1 tbsp|rice vinegar|s","1 clove|garlic|v","½|cucumber|v","1 handful|peanuts|d"],"steps":["Cook the noodles, rinse cold and drain well.","Whisk chili oil, soy, vinegar and garlic.","Toss everything, top with cucumber and crushed peanuts."]},{"id":"three-cup-tofu","name":"Three-cup tofu","cu":"China","min":20,"cost":1.5,"ing":["300 g|firm tofu|f","4 cloves|garlic|v","1 thumb|ginger|v","2 tbsp|soy sauce|s","1 tbsp|sesame oil|s","1 tsp|sugar|s","1 handful|basil|v","1 cup, raw|rice|d"],"steps":["Start the rice. Fry tofu cubes in sesame oil until golden.","Add whole garlic cloves and sliced ginger, fry 1 minute.","Add soy, sugar and 2 tbsp water, reduce until sticky.","Stir in basil."]},{"id":"garlic-chili-noodles","name":"Garlic chili oil noodles","cu":"China","min":10,"cost":0.7,"ing":["1 portion|noodles|d","2 cloves|garlic|v","1 tsp|chili flakes|s","1|spring onions|v","1 tbsp|soy sauce|s","1 tsp|rice vinegar|s","2 tbsp|vegetable oil|s"],"steps":["Cook the noodles and put them in a bowl with soy and vinegar.","Pile garlic, chili flakes and spring onions on top.","Pour smoking-hot oil over them so they sizzle, then toss."]},{"id":"black-pepper-chicken","name":"Black pepper chicken","cu":"China","min":20,"cost":1.9,"ing":["2|chicken thighs|f","½|onion|v","1|bell pepper|v","1 tsp|black pepper|s","1 tbsp|oyster sauce|s","1 tbsp|soy sauce|s","1 cup, raw|rice|d"],"steps":["Start the rice. Fry sliced chicken until golden.","Add onion and pepper, fry 2 minutes.","Add oyster sauce, soy and lots of coarse pepper, toss."]},{"id":"prawn-fried-rice","name":"Prawn fried rice","cu":"China","min":15,"cost":2.0,"ing":["1 cup, cooked|rice|d","100 g|frozen prawns|f","1|eggs|f","1 handful|frozen peas & carrots|f","1 clove|garlic|v","1 tbsp|soy sauce|s","1|spring onions|v"],"steps":["Fry the thawed prawns 2 minutes, take out.","Scramble the egg, add garlic and veg.","Add day-old rice and fry until crackling.","Return prawns, season with soy sauce."]},{"id":"japanese-curry","name":"Japanese chicken curry","cu":"Japan","min":40,"cost":1.8,"ing":["2 blocks|japanese curry roux|s","1|chicken thighs|f","1|potatoes|v","1|carrot|v","1|onion|v","1 cup, raw|rice|d"],"steps":["Fry chicken pieces and onion until lightly browned.","Add potato and carrot chunks with 400 ml water, simmer 15 minutes.","Turn off the heat, melt in the roux, simmer 5 minutes more."]},{"id":"yakisoba","name":"Yakisoba","cu":"Japan","min":20,"cost":1.5,"ing":["1 portion|noodles|d","80 g|minced pork|f","¼|cabbage|v","1|carrot|v","1 tbsp|oyster sauce|s","1 tbsp|ketchup|s","1 tbsp|soy sauce|s"],"steps":["Fry the pork, add cabbage and carrot.","Add cooked noodles and a splash of water.","Stir in oyster sauce, ketchup and soy sauce, fry until coated."]},{"id":"gyudon","name":"Gyudon (beef & onion bowl)","cu":"Japan","min":20,"cost":2.6,"ing":["120 g|thinly sliced beef|f","1|onion|v","2 tbsp|soy sauce|s","1 tbsp|honey|s","1 thumb|ginger|v","1 cup, raw|rice|d"],"steps":["Start the rice. Simmer sliced onion in 150 ml water with soy, honey and ginger 5 minutes.","Add the beef and simmer 2 minutes until just cooked.","Spoon over rice with some sauce."]},{"id":"mushroom-udon","name":"Mushroom udon soup","cu":"Japan","min":15,"cost":1.6,"ing":["1 pack|udon noodles|f","6|mushrooms|v","2 tbsp|soy sauce|s","1 tsp|honey|s","1|spring onions|v","1 handful|spinach|v"],"steps":["Simmer sliced mushrooms in 500 ml water with soy and honey 8 minutes.","Add the udon and spinach for 2 minutes.","Top with spring onions."]},{"id":"onigiri","name":"Tuna mayo onigiri","cu":"Japan","min":15,"cost":0.6,"ing":["1 cup, cooked|rice|d","½ tin|canned tuna|d","1 tbsp|mayonnaise|s","1 sheet|nori|d","1 tsp|soy sauce|s"],"steps":["Mix tuna, mayo and soy sauce.","Wet and salt your hands, flatten a ball of warm rice, add filling and close it.","Shape into a triangle and wrap with nori."]},{"id":"okonomiyaki","name":"Okonomiyaki","cu":"Japan","min":25,"cost":1.0,"ing":["½ cup|flour|d","2|eggs|f","¼|cabbage|v","2|spring onions|v","1 tbsp|mayonnaise|s","1 tbsp|ketchup|s","1 tsp|soy sauce|s"],"steps":["Mix flour, eggs and 80 ml water, fold in lots of finely shredded cabbage and spring onions.","Fry a thick pancake 5 minutes per side on medium heat.","Top with ketchup mixed with soy, then mayo."]},{"id":"salmon-teriyaki","name":"Salmon teriyaki","cu":"Japan","min":20,"cost":2.8,"ing":["1 fillet|frozen salmon|f","2 tbsp|soy sauce|s","1 tbsp|honey|s","1 tbsp|rice vinegar|s","1 cup, raw|rice|d","½ head|broccoli|v"],"steps":["Start the rice and steam the broccoli.","Pan-fry the thawed salmon 3 minutes per side.","Add soy, honey and vinegar, spoon the glaze over until sticky."]},{"id":"karaage","name":"Chicken karaage","cu":"Japan","min":30,"cost":1.8,"ing":["2|chicken thighs|f","2 tbsp|soy sauce|s","1 thumb|ginger|v","1 clove|garlic|v","3 tbsp|cornstarch|s","1 cup, raw|rice|d","¼|cabbage|v"],"steps":["Marinate chicken pieces in soy, ginger and garlic 15 minutes.","Toss in cornstarch.","Shallow-fry in 1 cm of oil until crisp. Serve with rice and shredded cabbage."]},{"id":"zaru-soba","name":"Cold soba noodles","cu":"Japan","min":10,"cost":1.4,"ing":["1 portion|soba noodles|d","2 tbsp|soy sauce|s","1 tsp|honey|s","1|spring onions|v","1 sheet|nori|d"],"steps":["Cook soba, rinse in cold water until cold.","Mix soy, honey and 4 tbsp cold water as a dipping sauce.","Top noodles with nori strips, dip as you eat."]},{"id":"nasu-dengaku","name":"Miso-glazed aubergine","cu":"Japan","min":25,"cost":1.1,"ing":["1|aubergine|v","1 tbsp|miso paste|s","1 tsp|honey|s","1 tsp|sesame seeds|s","1 cup, raw|rice|d"],"steps":["Halve the aubergine, score the flesh, fry cut side down until soft.","Mix miso, honey and a little water, spread on top.","Grill or cover the pan 3 minutes, sprinkle sesame."]},{"id":"shogayaki","name":"Ginger pork (shogayaki)","cu":"Japan","min":20,"cost":2.0,"ing":["150 g|pork loin slices|f","1 thumb|ginger|v","2 tbsp|soy sauce|s","1 tbsp|honey|s","½|onion|v","¼|cabbage|v","1 cup, raw|rice|d"],"steps":["Start the rice. Fry pork slices and onion.","Add grated ginger, soy and honey, toss until glazed.","Serve with shredded cabbage and rice."]},{"id":"shoyu-ramen","name":"Chicken shoyu ramen","cu":"Japan","min":25,"cost":2.0,"ing":["1 portion|noodles|d","1|chicken thighs|f","2 tbsp|soy sauce|s","1 clove|garlic|v","1 thumb|ginger|v","1|eggs|f","1|spring onions|v","1 handful|spinach|v"],"steps":["Simmer chicken, garlic and ginger in 600 ml water 15 minutes, slice the chicken.","Boil the egg 6½ minutes.","Season broth with soy sauce, cook noodles and spinach in it.","Top with chicken, egg and spring onions."]},{"id":"teriyaki-tofu","name":"Teriyaki tofu bowl","cu":"Japan","min":20,"cost":1.4,"ing":["250 g|firm tofu|f","2 tbsp|soy sauce|s","1 tbsp|honey|s","1 tbsp|rice vinegar|s","1 tsp|cornstarch|s","½ head|broccoli|v","1 cup, raw|rice|d"],"steps":["Start the rice. Coat tofu cubes in cornstarch and fry until crisp.","Steam the broccoli.","Pour soy, honey and vinegar over the tofu, reduce until sticky."]},{"id":"tuna-mayo-don","name":"Tuna mayo rice bowl","cu":"Japan","min":10,"cost":1.2,"ing":["1 cup, cooked|rice|d","1 tin|canned tuna|d","1 tbsp|mayonnaise|s","1 tsp|soy sauce|s","1 sheet|nori|d","1|spring onions|v"],"steps":["Warm the rice.","Mix tuna with mayo and soy sauce.","Pile on rice, top with torn nori and spring onions."]},{"id":"bibimbap","name":"Bibimbap","cu":"Korea","min":30,"cost":1.8,"ing":["1 cup, raw|rice|d","1|eggs|f","1 handful|spinach|v","1|carrot|v","1 handful|bean sprouts|v","3|mushrooms|v","1 tbsp|gochujang|s","1 tsp|sesame oil|s"],"steps":["Start the rice.","Quickly cook each vegetable separately with a pinch of salt and sesame oil.","Fry the egg sunny side up.","Arrange on rice, add gochujang and mix it all before eating."]},{"id":"kimchi-jjigae","name":"Kimchi stew","cu":"Korea","min":25,"cost":1.6,"ing":["1 cup|kimchi|f","150 g|firm tofu|f","80 g|minced pork|f","1 tsp|gochujang|s","½|onion|v","1|spring onions|v","1 cup, raw|rice|d"],"steps":["Fry pork and kimchi 3 minutes.","Add onion, gochujang and 400 ml water, simmer 10 minutes.","Add tofu slices for 5 minutes, top with spring onions."]},{"id":"japchae","name":"Japchae","cu":"Korea","min":30,"cost":1.5,"ing":["100 g|sweet potato noodles|d","1 handful|spinach|v","1|carrot|v","½|onion|v","3|mushrooms|v","2 tbsp|soy sauce|s","1 tbsp|sesame oil|s","1 tsp|sugar|s"],"steps":["Boil the noodles 6 minutes, rinse and cut shorter.","Stir-fry each vegetable briefly.","Toss everything with soy, sesame oil and sugar."]},{"id":"tteokbokki","name":"Tteokbokki","cu":"Korea","min":20,"cost":1.6,"ing":["200 g|rice cakes|f","2 tbsp|gochujang|s","1 tbsp|sugar|s","1 tbsp|soy sauce|s","1|spring onions|v","1|eggs|f"],"steps":["Boil the egg 9 minutes.","Simmer 300 ml water with gochujang, sugar and soy.","Add rice cakes and simmer 8 minutes until thick.","Top with egg and spring onions."]},{"id":"gochujang-chicken","name":"Spicy gochujang chicken","cu":"Korea","min":25,"cost":2.0,"ing":["2|chicken thighs|f","1 tbsp|gochujang|s","1 tbsp|soy sauce|s","1 tsp|honey|s","2 cloves|garlic|v","¼|cabbage|v","½|onion|v","1 cup, raw|rice|d"],"steps":["Start the rice. Mix gochujang, soy, honey and garlic, coat the chicken.","Fry chicken until browned.","Add cabbage and onion, cover 5 minutes until cooked through."]},{"id":"kimchi-pancake","name":"Kimchi pancake","cu":"Korea","min":20,"cost":0.9,"ing":["½ cup|flour|d","1 cup|kimchi|f","2|spring onions|v","1 tbsp|soy sauce|s","1 tsp|rice vinegar|s"],"steps":["Mix flour, chopped kimchi, some kimchi juice and 80 ml water.","Fry a thin pancake 4 minutes per side until crisp.","Dip in soy mixed with vinegar."]},{"id":"sundubu","name":"Soft tofu stew","cu":"Korea","min":20,"cost":1.5,"ing":["300 g|soft tofu|f","1|eggs|f","½ cup|kimchi|f","1 tsp|chili flakes|s","1 clove|garlic|v","3|mushrooms|v","1|spring onions|v"],"steps":["Fry kimchi, garlic and chili 2 minutes.","Add 300 ml water and mushrooms, simmer 5 minutes.","Spoon in big chunks of soft tofu, crack in the egg, simmer 3 minutes."]},{"id":"bulgogi-bowl","name":"Bulgogi-style beef bowl","cu":"Korea","min":20,"cost":2.2,"ing":["120 g|minced beef|f","2 tbsp|soy sauce|s","1 tbsp|honey|s","2 cloves|garlic|v","1 tsp|sesame oil|s","1|spring onions|v","1 cup, raw|rice|d","½|cucumber|v"],"steps":["Start the rice. Fry the beef until browned and crisp in places.","Add soy, honey, garlic and sesame oil, cook until sticky.","Serve on rice with cucumber and spring onions."]},{"id":"doenjang-jjigae","name":"Soybean paste stew","cu":"Korea","min":25,"cost":1.3,"ing":["1 tbsp|miso paste|s","150 g|firm tofu|f","1|potatoes|v","½|onion|v","½|courgette|v","1 pinch|chili flakes|s"],"steps":["Simmer diced potato and onion in 400 ml water 8 minutes.","Dissolve the paste (doenjang or miso), add courgette and tofu.","Simmer 5 minutes, add chili."]},{"id":"kimbap","name":"Veggie kimbap","cu":"Korea","min":40,"cost":1.5,"ing":["1 cup, raw|rice|d","2 sheets|nori|d","1|eggs|f","1|carrot|v","½|cucumber|v","1 handful|spinach|v","1 tsp|sesame oil|s"],"steps":["Season cooked rice with sesame oil and salt.","Make a thin omelette and cut into strips; cook carrot and spinach.","Spread rice on nori, line up fillings, roll tightly.","Slice with a wet knife."]},{"id":"chana-masala","name":"Chana masala","cu":"India","min":30,"cost":1.0,"ing":["1 tin|chickpeas|d","1|onion|v","1 tin|chopped tomatoes|d","2 cloves|garlic|v","1 thumb|ginger|v","1 tsp|garam masala|s","1 tsp|cumin seeds|s","1 cup, raw|rice|d"],"steps":["Fry cumin seeds, then onion until golden.","Add garlic, ginger and garam masala for 1 minute.","Add tomatoes and chickpeas, simmer 15 minutes, mash a few chickpeas to thicken."]},{"id":"aloo-gobi","name":"Aloo gobi","cu":"India","min":35,"cost":1.0,"ing":["2|potatoes|v","½|cauliflower|v","1|onion|v","1 tsp|turmeric|s","1 tsp|cumin seeds|s","1 tsp|garam masala|s","½ tin|chopped tomatoes|d"],"steps":["Fry cumin seeds and onion.","Add potato and cauliflower chunks with turmeric, fry 5 minutes.","Add tomatoes and a splash of water, cover and cook 15 minutes until tender.","Stir in garam masala."]},{"id":"butter-chicken","name":"Easy butter chicken","cu":"India","min":35,"cost":2.2,"ing":["2|chicken thighs|f","1 tin|chopped tomatoes|d","2 tbsp|yogurt|f","1 tbsp|butter|f","1 tbsp|garam masala|s","2 cloves|garlic|v","1 thumb|ginger|v","1 cup, raw|rice|d"],"steps":["Marinate chicken in yogurt and half the garam masala.","Fry chicken in butter until browned.","Add garlic, ginger, rest of the spice and tomatoes, simmer 15 minutes.","Stir in a spoon of yogurt off the heat."]},{"id":"rajma","name":"Rajma (kidney bean curry)","cu":"India","min":30,"cost":1.0,"ing":["1 tin|kidney beans|d","1|onion|v","1 tin|chopped tomatoes|d","2 cloves|garlic|v","1 thumb|ginger|v","1 tsp|garam masala|s","1 tsp|cumin seeds|s","1 cup, raw|rice|d"],"steps":["Fry cumin, onion, garlic and ginger.","Add garam masala and tomatoes, cook 5 minutes.","Add drained beans and 150 ml water, simmer 15 minutes."]},{"id":"egg-curry","name":"Egg curry","cu":"India","min":30,"cost":1.1,"ing":["2|eggs|f","1|onion|v","1 tin|chopped tomatoes|d","2 cloves|garlic|v","1 thumb|ginger|v","1 tsp|garam masala|s","1 tsp|turmeric|s","1 cup, raw|rice|d"],"steps":["Hard-boil the eggs 9 minutes, peel and score.","Fry onion until deep golden, add garlic, ginger and spices.","Add tomatoes, simmer 10 minutes.","Add eggs and simmer 5 minutes."]},{"id":"veg-pulao","name":"One-pot vegetable pulao","cu":"India","min":35,"cost":1.0,"ing":["1 cup|rice|d","1 cup|frozen peas & carrots|f","1|onion|v","1 tsp|cumin seeds|s","1 tsp|garam masala|s","2 tbsp|yogurt|f"],"steps":["Rinse rice. Fry cumin and sliced onion until golden.","Add rice, spice and veg, stir 1 minute.","Add 2 cups water, cover and cook on low 12 minutes, rest 10.","Serve with yogurt."]},{"id":"khichdi","name":"Khichdi","cu":"India","min":30,"cost":0.7,"ing":["½ cup|rice|d","½ cup|red lentils|d","1 tsp|turmeric|s","1 tsp|cumin seeds|s","1 thumb|ginger|v"],"steps":["Rinse rice and lentils together.","Fry cumin and ginger, add rice, lentils, turmeric and 1 l water.","Simmer 25 minutes, stirring, until porridge-like. Salt well."]},{"id":"saag-paneer","name":"Saag paneer","cu":"India","min":30,"cost":1.9,"ing":["150 g|paneer|f","200 g|spinach|v","1|onion|v","2 cloves|garlic|v","1 thumb|ginger|v","1 tsp|garam masala|s","2 tbsp|yogurt|f","1 cup, raw|rice|d"],"steps":["Fry paneer cubes until golden, take out.","Fry onion, garlic, ginger and spice.","Add spinach until wilted, blend or chop finely.","Stir in yogurt and paneer."]},{"id":"keema-matar","name":"Keema matar","cu":"India","min":30,"cost":1.7,"ing":["120 g|minced beef|f","1 cup|frozen peas & carrots|f","1|onion|v","½ tin|chopped tomatoes|d","1 tsp|garam masala|s","2 cloves|garlic|v","1 thumb|ginger|v","1 cup, raw|rice|d"],"steps":["Fry onion, garlic and ginger, add mince and brown it.","Add spice and tomatoes, simmer 10 minutes.","Add peas and cook 5 minutes more."]},{"id":"aloo-matar","name":"Potato & pea curry","cu":"India","min":30,"cost":0.9,"ing":["2|potatoes|v","1 cup|frozen peas & carrots|f","1|onion|v","½ tin|chopped tomatoes|d","1 tsp|turmeric|s","1 tsp|cumin seeds|s","1 tsp|garam masala|s"],"steps":["Fry cumin and onion.","Add diced potato, turmeric and tomatoes with 200 ml water, cover 15 minutes.","Add peas and garam masala for 5 minutes."]},{"id":"masala-omelette","name":"Masala omelette","cu":"India","min":10,"cost":0.7,"ing":["3|eggs|f","½|onion|v","1|tomatoes|v","1 pinch|chili flakes|s","1 handful|coriander|v","1 pinch|turmeric|s"],"steps":["Beat eggs with finely chopped onion, tomato, coriander, chili, turmeric and salt.","Cook in a hot oiled pan, fold when nearly set."]},{"id":"thai-green-curry","name":"Thai green curry","cu":"Thailand","min":25,"cost":1.9,"ing":["1|chicken thighs|f","1 tbsp|green curry paste|s","½ tin|coconut milk|d","1 handful|green beans|v","1 tsp|fish sauce|s","1 handful|basil|v","1 cup, raw|rice|d"],"steps":["Start the rice. Fry curry paste in a spoon of coconut cream.","Add sliced chicken, then the rest of the coconut milk.","Add green beans, simmer 8 minutes, season with fish sauce.","Stir in basil."]},{"id":"thai-red-curry-tofu","name":"Thai red curry with tofu","cu":"Thailand","min":25,"cost":1.7,"ing":["200 g|firm tofu|f","1 tbsp|red curry paste|s","½ tin|coconut milk|d","1|bell pepper|v","1 handful|green beans|v","1 tsp|soy sauce|s","1 cup, raw|rice|d"],"steps":["Start the rice. Fry curry paste in a little coconut milk.","Add the rest of the coconut milk, pepper and beans, simmer 5 minutes.","Add fried tofu cubes, season with soy."]},{"id":"pad-thai","name":"Pad thai","cu":"Thailand","min":25,"cost":1.8,"ing":["100 g|rice noodles|d","1|eggs|f","100 g|firm tofu|f","1 handful|bean sprouts|v","1 handful|peanuts|d","1 tbsp|fish sauce|s","1 tbsp|sugar|s","½|lime|v","1|spring onions|v"],"steps":["Soak the noodles in hot water 8 minutes.","Fry tofu, push aside and scramble the egg.","Add noodles, fish sauce, sugar and lime juice, toss 2 minutes.","Add sprouts and spring onions, top with peanuts."]},{"id":"pad-kra-pao","name":"Pad kra pao (basil pork)","cu":"Thailand","min":15,"cost":1.8,"ing":["120 g|minced pork|f","3 cloves|garlic|v","1 pinch|chili flakes|s","1 handful|basil|v","1 tbsp|soy sauce|s","1 tsp|oyster sauce|s","1 tsp|fish sauce|s","1|eggs|f","1 cup, raw|rice|d"],"steps":["Start the rice. Fry garlic and chili, add the pork and fry until crisp.","Add soy, oyster and fish sauce.","Stir in basil, serve with a crispy fried egg."]},{"id":"tom-yum","name":"Tom yum soup","cu":"Thailand","min":20,"cost":2.2,"ing":["100 g|frozen prawns|f","4|mushrooms|v","1 tbsp|tom yum paste|s","1 tsp|fish sauce|s","½|lime|v","1|tomatoes|v"],"steps":["Simmer 500 ml water with tom yum paste.","Add mushrooms and tomato wedges for 3 minutes.","Add prawns until pink, finish with fish sauce and lime."]},{"id":"tom-kha","name":"Coconut chicken soup","cu":"Thailand","min":25,"cost":1.9,"ing":["1|chicken thighs|f","½ tin|coconut milk|d","4|mushrooms|v","½|lime|v","1 tbsp|fish sauce|s","1 thumb|ginger|v"],"steps":["Simmer sliced ginger in the coconut milk with 200 ml water.","Add sliced chicken and mushrooms, simmer 10 minutes.","Season with fish sauce and lime."]},{"id":"khao-pad","name":"Thai fried rice","cu":"Thailand","min":15,"cost":1.2,"ing":["1 cup, cooked|rice|d","2|eggs|f","½|onion|v","1|tomatoes|v","1 tbsp|fish sauce|s","1 tsp|soy sauce|s","½|lime|v","½|cucumber|v"],"steps":["Fry onion, push aside and scramble the eggs.","Add rice and tomato, fry until hot.","Season with fish and soy sauce, serve with cucumber and lime."]},{"id":"larb","name":"Larb (spicy pork salad)","cu":"Thailand","min":20,"cost":1.8,"ing":["150 g|minced pork|f","1|lime|v","1 tbsp|fish sauce|s","1 pinch|chili flakes|s","½|onion|v","1 handful|mint|v","½|lettuce|v","½ cup, raw|rice|d"],"steps":["Cook pork in a splash of water until done, no oil.","Off the heat add lime, fish sauce, chili, sliced onion and mint.","Eat in lettuce cups with rice."]},{"id":"massaman","name":"Massaman chicken curry","cu":"Thailand","min":40,"cost":2.0,"ing":["1|chicken thighs|f","2|potatoes|v","1 tbsp|massaman curry paste|s","½ tin|coconut milk|d","1 handful|peanuts|d","½|onion|v","1 cup, raw|rice|d"],"steps":["Fry the paste in coconut cream, add chicken and onion.","Add potato chunks, the rest of the coconut milk and 100 ml water.","Simmer 25 minutes until the potatoes are soft, add peanuts."]},{"id":"pad-see-ew","name":"Pad see ew","cu":"Thailand","min":20,"cost":1.7,"ing":["120 g|rice noodles|d","1|chicken thighs|f","½ head|broccoli|v","1|eggs|f","1 tbsp|soy sauce|s","1 tbsp|oyster sauce|s","1 tsp|sugar|s","1 clove|garlic|v"],"steps":["Soak wide rice noodles until soft.","Fry chicken and garlic, add broccoli for 2 minutes.","Scramble the egg in the pan, add noodles, soy, oyster sauce and sugar.","Leave untouched a moment to char."]},{"id":"pho-ga","name":"Chicken pho","cu":"Vietnam","min":40,"cost":1.9,"ing":["100 g|rice noodles|d","1|chicken thighs|f","½|onion|v","1 thumb|ginger|v","1|star anise|s","1 tbsp|fish sauce|s","1 handful|bean sprouts|v","½|lime|v","1 handful|basil|v"],"steps":["Char onion and ginger in a dry pan.","Simmer with chicken, star anise and 800 ml water for 30 minutes.","Shred chicken, season broth with fish sauce.","Pour over soaked noodles, top with sprouts, basil and lime."]},{"id":"thit-kho","name":"Caramel pork & eggs","cu":"Vietnam","min":45,"cost":1.9,"ing":["150 g|pork shoulder|f","1|eggs|f","1 tbsp|fish sauce|s","1 tbsp|sugar|s","2 cloves|garlic|v","1 cup, raw|rice|d"],"steps":["Hard-boil and peel the egg.","Melt sugar until dark amber, add pork chunks and garlic.","Add fish sauce and water to cover, simmer 35 minutes with the egg until sticky."]},{"id":"banh-mi-bowl","name":"Bánh mì rice bowl","cu":"Vietnam","min":20,"cost":1.8,"ing":["120 g|minced pork|f","1|carrot|v","½|cucumber|v","2 tbsp|rice vinegar|s","1 tsp|sugar|s","1 tbsp|fish sauce|s","1 handful|coriander|v","1 tsp|sriracha|s","1 cup, raw|rice|d"],"steps":["Quick-pickle carrot matchsticks in vinegar, sugar and salt 10 minutes.","Fry the pork with fish sauce until crisp.","Serve on rice with pickles, cucumber, coriander and sriracha."]},{"id":"summer-rolls","name":"Tofu summer rolls","cu":"Vietnam","min":25,"cost":1.6,"ing":["6 sheets|rice paper|d","50 g|rice noodles|d","100 g|firm tofu|f","½|lettuce|v","1|carrot|v","½|cucumber|v","1 handful|mint|v","1 tbsp|peanut butter|s","1 tbsp|hoisin sauce|s"],"steps":["Soak noodles, fry tofu strips.","Dip a rice paper in warm water 5 seconds, lay flat.","Fill with lettuce, noodles, tofu, veg and mint, fold sides and roll.","Dip in peanut butter mixed with hoisin and water."]},{"id":"tofu-vermicelli","name":"Tofu vermicelli bowl","cu":"Vietnam","min":20,"cost":1.5,"ing":["100 g|rice noodles|d","150 g|firm tofu|f","½|lettuce|v","1|carrot|v","½|cucumber|v","1 handful|peanuts|d","1 tbsp|soy sauce|s","½|lime|v","1 tsp|sugar|s"],"steps":["Soak the noodles and rinse cold.","Fry tofu until crisp.","Mix soy, lime, sugar and 2 tbsp water as dressing.","Pile noodles, veg and tofu in a bowl, pour over dressing, top with peanuts."]},{"id":"lemongrass-chicken","name":"Lemongrass chicken","cu":"Vietnam","min":30,"cost":2.0,"ing":["2|chicken thighs|f","1 stalk|lemongrass|v","2 cloves|garlic|v","1 tbsp|fish sauce|s","1 tsp|sugar|s","1 cup, raw|rice|d","½|cucumber|v"],"steps":["Finely chop lemongrass and garlic, mix with fish sauce and sugar.","Marinate the chicken 15 minutes.","Pan-fry until caramelised. Serve with rice and cucumber."]},{"id":"nasi-goreng","name":"Nasi goreng","cu":"Indonesia","min":15,"cost":1.1,"ing":["1 cup, cooked|rice|d","1|eggs|f","1 tbsp|kecap manis|s","2 cloves|garlic|v","½|onion|v","1 pinch|chili flakes|s","½|cucumber|v"],"steps":["Fry onion, garlic and chili.","Add day-old rice and kecap manis, fry until dark and sticky.","Top with a fried egg and cucumber slices."]},{"id":"mie-goreng","name":"Mie goreng","cu":"Indonesia","min":20,"cost":1.3,"ing":["1 portion|noodles|d","1|eggs|f","¼|cabbage|v","1 tbsp|kecap manis|s","2 cloves|garlic|v","1 pinch|chili flakes|s"],"steps":["Cook and drain the noodles.","Fry garlic and chili, scramble the egg.","Add cabbage, noodles and kecap manis, toss until glossy."]},{"id":"chicken-satay","name":"Chicken satay & peanut sauce","cu":"Malaysia","min":30,"cost":2.1,"ing":["2|chicken thighs|f","2 tbsp|peanut butter|s","3 tbsp|coconut milk|d","1 tbsp|soy sauce|s","1 tsp|curry powder|s","½|lime|v","1 cup, raw|rice|d","½|cucumber|v"],"steps":["Marinate chicken strips in curry powder, soy and a spoon of coconut milk.","Pan-fry or grill until charred.","Heat peanut butter, coconut milk, lime and water into a sauce.","Serve with rice and cucumber."]},{"id":"gado-gado","name":"Gado-gado","cu":"Indonesia","min":25,"cost":1.5,"ing":["1|potatoes|v","1|eggs|f","1 handful|green beans|v","¼|cabbage|v","100 g|firm tofu|f","2 tbsp|peanut butter|s","½|lime|v","1 tsp|soy sauce|s"],"steps":["Boil potato chunks, add the egg and beans for the last 8 minutes.","Fry the tofu.","Whisk peanut butter, lime, soy and hot water into a sauce.","Arrange veg, egg and tofu, pour over the sauce."]},{"id":"laksa","name":"Curry laksa","cu":"Malaysia","min":25,"cost":2.2,"ing":["100 g|rice noodles|d","½ tin|coconut milk|d","1 tbsp|laksa paste|s","1|chicken thighs|f","1 handful|bean sprouts|v","1|eggs|f","½|lime|v"],"steps":["Fry laksa paste 1 minute, add coconut milk and 300 ml water.","Simmer sliced chicken in it 8 minutes.","Pour over soaked noodles, top with egg, sprouts and lime."]},{"id":"kari-ayam","name":"Malaysian chicken curry","cu":"Malaysia","min":40,"cost":1.9,"ing":["2|chicken thighs|f","1|potatoes|v","2 tbsp|curry powder|s","½ tin|coconut milk|d","1|onion|v","2 cloves|garlic|v","1 cup, raw|rice|d"],"steps":["Fry onion and garlic, add curry powder mixed with water to a paste.","Add chicken and potato, coat well.","Add coconut milk and 150 ml water, simmer 25 minutes."]},{"id":"tempe-manis","name":"Sweet soy tempeh","cu":"Indonesia","min":20,"cost":1.7,"ing":["200 g|tempeh|f","2 tbsp|kecap manis|s","2 cloves|garlic|v","1 pinch|chili flakes|s","1 handful|peanuts|d","1 cup, raw|rice|d"],"steps":["Start the rice. Cut tempeh into thin sticks and fry until crisp.","Fry garlic and chili, add kecap manis and a splash of water.","Toss tempeh and peanuts in the glaze."]},{"id":"chicken-adobo","name":"Chicken adobo","cu":"Philippines","min":45,"cost":1.8,"ing":["2|chicken thighs|f","3 tbsp|soy sauce|s","3 tbsp|rice vinegar|s","4 cloves|garlic|v","2|bay leaves|s","1 tsp|black pepper|s","1 cup, raw|rice|d"],"steps":["Put everything except the rice in a pan with 100 ml water.","Simmer covered 30 minutes.","Uncover, reduce the sauce until glossy and brown the chicken in it."]},{"id":"pancit-canton","name":"Pancit canton","cu":"Philippines","min":25,"cost":1.6,"ing":["1 portion|noodles|d","1|chicken thighs|f","¼|cabbage|v","1|carrot|v","1 handful|green beans|v","1 tbsp|soy sauce|s","1 tbsp|oyster sauce|s","2 cloves|garlic|v"],"steps":["Fry sliced chicken and garlic.","Add carrot, beans and cabbage, then 100 ml water.","Add noodles, soy and oyster sauce, toss until the liquid is absorbed."]},{"id":"tortang-talong","name":"Aubergine omelette","cu":"Philippines","min":20,"cost":0.9,"ing":["1|aubergine|v","2|eggs|f","1 clove|garlic|v","1 cup, raw|rice|d"],"steps":["Char the whole aubergine in a dry pan or under the grill until soft, peel.","Flatten it with a fork, dip in beaten egg with garlic and salt.","Fry 3 minutes per side."]},{"id":"ginisang-monggo","name":"Mung bean stew","cu":"Philippines","min":40,"cost":0.8,"ing":["½ cup|mung beans|d","1|onion|v","2 cloves|garlic|v","½ tin|chopped tomatoes|d","1 handful|spinach|v","1 tbsp|soy sauce|s"],"steps":["Simmer mung beans in 700 ml water 30 minutes until soft.","Fry onion, garlic and tomato, stir into the beans.","Add spinach and soy sauce for 2 minutes."]},{"id":"garlic-green-beans","name":"Garlic green beans","cu":"China","min":10,"cost":0.6,"ing":["1 handful|green beans|v","2 cloves|garlic|v","1 tsp|soy sauce|s","1 pinch|chili flakes|s"],"steps":["Fry beans in a hot pan until blistered, 5 minutes.","Add garlic and chili for 30 seconds.","Splash with soy sauce."],"side":true},{"id":"egg-drop-soup","name":"Egg drop soup","cu":"China","min":10,"cost":0.4,"ing":["1|eggs|f","1 tsp|cornstarch|s","1|stock cube|s","1 tsp|soy sauce|s","1|spring onions|v"],"steps":["Bring 400 ml water to a simmer with the stock cube and soy sauce.","Thicken lightly with cornstarch.","Stir the soup in a circle and pour in the beaten egg slowly.","Top with spring onions."],"side":true},{"id":"steamed-egg","name":"Chinese steamed egg","cu":"China","min":15,"cost":0.4,"ing":["2|eggs|f","1 tsp|soy sauce|s","½ tsp|sesame oil|s","1|spring onions|v"],"steps":["Beat eggs with 1.5× their volume of warm water and a pinch of salt.","Strain into a bowl, cover with a plate.","Steam on low 10 minutes until just set.","Drizzle with soy and sesame oil."],"side":true},{"id":"tamagoyaki","name":"Tamagoyaki","cu":"Japan","min":10,"cost":0.5,"ing":["2|eggs|f","1 tsp|sugar|s","1 tsp|soy sauce|s"],"steps":["Beat eggs with sugar and soy.","Pour a thin layer into an oiled pan, roll it up when nearly set.","Add another layer under the roll, repeat.","Slice."],"side":true},{"id":"hiyayakko","name":"Cold tofu with soy","cu":"Japan","min":3,"cost":0.6,"ing":["150 g|soft tofu|f","1 tsp|soy sauce|s","1|spring onions|v","1 thumb|ginger|v"],"steps":["Drain the tofu and put it on a plate.","Top with grated ginger and spring onions.","Pour over soy sauce."],"side":true},{"id":"wakame-salad","name":"Wakame cucumber salad","cu":"Japan","min":5,"cost":0.6,"ing":["1 pinch|dried wakame|d","½|cucumber|v","1 tbsp|rice vinegar|s","1 tsp|sesame oil|s","1 tsp|sugar|s"],"steps":["Soak wakame 5 minutes and squeeze dry.","Slice cucumber thinly and salt it 5 minutes.","Toss with vinegar, sugar and sesame oil."],"side":true},{"id":"goma-ae","name":"Sesame spinach","cu":"Japan","min":8,"cost":0.5,"ing":["200 g|spinach|v","1 tbsp|sesame seeds|s","1 tsp|soy sauce|s","1 tsp|sugar|s"],"steps":["Blanch spinach 30 seconds, cool and squeeze dry.","Toast and crush sesame seeds, mix with soy and sugar.","Toss with the spinach."],"side":true},{"id":"quick-kimchi","name":"Quick cabbage kimchi","cu":"Korea","min":20,"cost":0.3,"ing":["¼|cabbage|v","1 tbsp|chili flakes|s","2 cloves|garlic|v","1 thumb|ginger|v","1 tsp|sugar|s"],"steps":["Chop cabbage, salt it well and leave 1 hour, rinse and squeeze.","Mix with chili, garlic, ginger and sugar.","Pack in a jar; it's good now and better after 2 days."],"side":true},{"id":"gyeran-mari","name":"Korean rolled omelette","cu":"Korea","min":10,"cost":0.5,"ing":["2|eggs|f","½|carrot|v","1|spring onions|v"],"steps":["Beat eggs with finely chopped carrot, spring onion and salt.","Pour into a pan, roll up as it sets, adding more egg.","Slice."],"side":true},{"id":"kongnamul","name":"Bean sprout salad","cu":"Korea","min":8,"cost":0.4,"ing":["2 handfuls|bean sprouts|v","1 tsp|sesame oil|s","1 clove|garlic|v","1|spring onions|v"],"steps":["Boil sprouts 3 minutes with the lid on, drain.","Toss with sesame oil, garlic, spring onion and salt."],"side":true},{"id":"gamja-jorim","name":"Soy-glazed potatoes","cu":"Korea","min":25,"cost":0.4,"ing":["2|potatoes|v","2 tbsp|soy sauce|s","1 tbsp|honey|s","1 clove|garlic|v","1 tsp|sesame seeds|s"],"steps":["Fry small potato cubes until golden.","Add soy, honey, garlic and 80 ml water.","Simmer until glossy and tender, sprinkle sesame."],"side":true},{"id":"raita","name":"Cucumber raita","cu":"India","min":5,"cost":0.4,"ing":["3 tbsp|yogurt|f","½|cucumber|v","1 pinch|cumin seeds|s"],"steps":["Grate the cucumber and squeeze out the water.","Mix with yogurt, toasted cumin and salt."],"side":true},{"id":"chapati","name":"Chapati","cu":"India","min":25,"cost":0.15,"ing":["½ cup|flour|d","1 tsp|vegetable oil|s"],"steps":["Mix flour, oil, salt and warm water into a soft dough, rest 15 minutes.","Roll thin circles.","Cook in a dry hot pan 1 minute per side until puffed."],"side":true},{"id":"jeera-rice","name":"Jeera rice","cu":"India","min":20,"cost":0.25,"ing":["½ cup|rice|d","1 tsp|cumin seeds|s","1 tsp|butter|f"],"steps":["Fry cumin seeds in butter until fragrant.","Add rinsed rice and 1.2× water.","Cover and cook on low 12 minutes, rest 10."],"side":true},{"id":"thai-cucumber-salad","name":"Thai cucumber salad","cu":"Thailand","min":5,"cost":0.4,"ing":["½|cucumber|v","¼|onion|v","1 tbsp|rice vinegar|s","1 tsp|sugar|s","1 pinch|chili flakes|s"],"steps":["Dissolve sugar in vinegar with a pinch of salt.","Add sliced cucumber, onion and chili."],"side":true},{"id":"garlic-bok-choy","name":"Garlic bok choy","cu":"China","min":8,"cost":0.8,"ing":["2|bok choy|v","2 cloves|garlic|v","1 tsp|soy sauce|s"],"steps":["Halve the bok choy.","Fry garlic 30 seconds, add bok choy and a splash of water.","Cover 2 minutes, finish with soy sauce."],"side":true},{"id":"do-chua","name":"Pickled carrot & daikon","cu":"Vietnam","min":10,"cost":0.3,"ing":["1|carrot|v","¼|daikon radish|v","3 tbsp|rice vinegar|s","1 tbsp|sugar|s"],"steps":["Cut carrot and radish into matchsticks.","Mix with vinegar, sugar, a pinch of salt and 3 tbsp warm water.","Leave 30 minutes; keeps 2 weeks in the fridge."],"side":true},{"id":"spring-rolls","name":"Crispy spring rolls","cu":"Vietnam","min":15,"cost":0.9,"ing":["4|frozen spring rolls|f","1 tsp|sriracha|s"],"steps":["Bake or air-fry the frozen rolls until golden.","Dip in sriracha or sweet chili sauce."],"side":true},{"id":"coconut-rice","name":"Coconut rice","cu":"Malaysia","min":20,"cost":0.5,"ing":["½ cup|rice|d","¼ tin|coconut milk|d"],"steps":["Rinse rice, cook with coconut milk topped up to 1.2× the rice volume and a pinch of salt.","Cover on low 12 minutes, rest 10."],"side":true},{"id":"sesame-broccoli","name":"Sesame broccoli","cu":"Japan","min":8,"cost":0.5,"ing":["½ head|broccoli|v","1 tsp|sesame oil|s","1 tsp|soy sauce|s","1 tsp|sesame seeds|s"],"steps":["Steam broccoli 4 minutes.","Toss with sesame oil, soy and toasted sesame seeds."],"side":true}];
+const MORE_META={"tomato-egg":{"kcal":420,"p":16,"veg":1,"keep":2,"art":{"t":"bowl","b":"#f5f1e6","tp":[["chunk","#d9402b",4],["chunk","#f7d774",5],["ring","#5aa64a",5]]},"tip":"China's most loved home dish. Ripe tomatoes make the sauce."},"dan-dan-noodles":{"kcal":620,"p":28,"veg":0,"keep":2,"art":{"t":"bowl","b":"#b8331f","tp":[["strip","#f0d48a",8],["dot","#8a5a3a",9],["leaf","#3e8e41",4]]},"tip":"Make it milder by halving the chili oil."},"kung-pao-chicken":{"kcal":620,"p":34,"veg":0,"keep":3,"art":{"t":"bowl","b":"#f5f1e6","tp":[["chunk","#c98b4e",5],["dot","#c9955a",5],["strip","#d63c2f",4],["dot","#c0392b",5]]},"tip":"Toast the peanuts in a dry pan first for more crunch."},"hot-sour-soup":{"kcal":280,"p":16,"veg":1,"keep":2,"art":{"t":"soup","b":"#7a4426","tp":[["cube","#f2ead2",6],["chunk","#8a6a4a",3],["ring","#5aa64a",5]]},"tip":"The sourness comes from vinegar added at the end, so taste and adjust."},"veg-chow-mein":{"kcal":520,"p":16,"veg":1,"keep":2,"art":{"t":"plate","b":"#ecd38a","tp":[["strip","#f0d48a",8],["strip","#c9dd9a",6],["strip","#ee7f2d",4],["strip","#f2f0d8",5]]},"tip":"High heat and a dry pan stop the noodles going soggy."},"sweet-sour-chicken":{"kcal":640,"p":30,"veg":0,"keep":3,"art":{"t":"bowl","b":"#f5f1e6","tp":[["chunk","#d8642b",6],["strip","#d63c2f",4],["cube","#f5d04a",4]]},"tip":"Use the pineapple juice from the tin instead of water."},"chicken-congee":{"kcal":380,"p":20,"veg":0,"keep":3,"art":{"t":"soup","b":"#efe6d2","tp":[["chunk","#c98b4e",5],["ring","#5aa64a",5],["strip","#e8c27a",3]]},"tip":"Cheapest comfort food there is. Great when you're ill or tired."},"scallion-pancakes":{"kcal":420,"p":8,"veg":1,"keep":2,"art":{"t":"plate","b":"#e9c88e","tp":[["ring","#5aa64a",5],["strip","#c9a05a",4]]},"tip":"Make a batch and freeze them between baking paper."},"red-braised-tofu":{"kcal":480,"p":24,"veg":1,"keep":3,"art":{"t":"bowl","b":"#f5f1e6","tp":[["cube","#c98b4e",6],["ring","#5aa64a",5]]},"tip":"Caramelising the sugar first gives the deep red colour."},"yuxiang-aubergine":{"kcal":450,"p":8,"veg":1,"keep":3,"art":{"t":"bowl","b":"#f5f1e6","tp":[["chunk","#5b3a5e",5],["ring","#5aa64a",5],["dot","#c0392b",5]]},"tip":"There's no fish in it. The name comes from the sauce used for fish."},"pork-dumplings":{"kcal":520,"p":24,"veg":0,"keep":3,"art":{"t":"plate","b":"#f1ead8","tp":[["crescent","#efe1c0",5],["ring","#5aa64a",5]]},"tip":"Make 50 on a Sunday and freeze them on a tray. They cook from frozen."},"oyster-chicken-broccoli":{"kcal":540,"p":34,"veg":0,"keep":3,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#c98b4e",5],["chunk","#3f8f3a",5]]},"tip":"A bottle of oyster sauce makes almost any stir-fry taste like takeaway."},"zhajiangmian":{"kcal":600,"p":26,"veg":0,"keep":3,"art":{"t":"bowl","b":"#ecd38a","tp":[["strip","#f0d48a",8],["dot","#5a2a1a",10],["chunk","#5d9b4a",5]]},"tip":"The meat sauce keeps 3 days. Make a double batch."},"sichuan-cold-noodles":{"kcal":480,"p":14,"veg":1,"keep":2,"art":{"t":"bowl","b":"#ecd38a","tp":[["strip","#f0d48a",8],["chunk","#5d9b4a",5],["dot","#c9955a",5],["dot","#c0392b",5]]},"tip":"Perfect summer lunch, made the night before."},"three-cup-tofu":{"kcal":500,"p":22,"veg":1,"keep":3,"art":{"t":"bowl","b":"#f5f1e6","tp":[["cube","#c98b4e",6],["leaf","#3e8e41",4]]},"tip":"Traditionally made with chicken. Thighs work the same way."},"garlic-chili-noodles":{"kcal":520,"p":14,"veg":1,"keep":1,"art":{"t":"bowl","b":"#ecd38a","tp":[["strip","#f0d48a",8],["dot","#c0392b",5],["ring","#5aa64a",5]]},"tip":"The fastest dinner in the app. Ten minutes from start to bowl."},"black-pepper-chicken":{"kcal":560,"p":32,"veg":0,"keep":3,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#c98b4e",5],["strip","#d63c2f",4],["strip","#e8dcc0",4]]},"tip":"Crush whole peppercorns for a much stronger flavour."},"prawn-fried-rice":{"kcal":520,"p":24,"veg":0,"keep":1,"art":{"t":"bowl","b":"#e9c46a","tp":[["crescent","#f08a5d",4],["dot","#7cb342",6],["chunk","#f7d774",3]]},"tip":"Frozen prawns from an Asian supermarket are far cheaper than fresh."},"japanese-curry":{"kcal":720,"p":30,"veg":0,"keep":4,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#8a5326",3],["cube","#e6c27a",5],["strip","#ee7f2d",4]]},"tip":"A box of roux makes 8–10 portions and the curry tastes better the next day."},"yakisoba":{"kcal":560,"p":22,"veg":0,"keep":2,"art":{"t":"plate","b":"#7a4426","tp":[["strip","#f0d48a",8],["strip","#c9dd9a",6],["strip","#ee7f2d",4]]},"tip":"Oyster sauce + ketchup + soy is a cheap stand-in for yakisoba sauce."},"gyudon":{"kcal":680,"p":30,"veg":0,"keep":2,"art":{"t":"bowl","b":"#f5f1e6","tp":[["chunk","#7a3e22",5],["strip","#e8dcc0",5],["ring","#5aa64a",5]]},"tip":"Ask the butcher for 'carne para carpaccio' or freeze beef 30 minutes to slice it thin."},"mushroom-udon":{"kcal":420,"p":14,"veg":1,"keep":1,"art":{"t":"soup","b":"#e2c38a","tp":[["strip","#f7f1df",6],["chunk","#8a6a4a",3],["leaf","#3e8e41",4],["ring","#5aa64a",5]]},"tip":"Vacuum-packed udon keeps for months in the cupboard."},"onigiri":{"kcal":360,"p":14,"veg":0,"keep":1,"art":{"t":"plate","b":"#f5f1e6","tp":[["cube","#f7f4ec",3],["strip","#1f2a24",4]]},"tip":"Wrap in cling film for a cheap packed lunch."},"okonomiyaki":{"kcal":520,"p":20,"veg":1,"keep":1,"art":{"t":"plate","b":"#d9a45a","tp":[["strip","#7a3e22",4],["strip","#fbf6e6",4],["ring","#5aa64a",5]]},"tip":"Add any leftovers: bacon, cheese, kimchi, prawns."},"salmon-teriyaki":{"kcal":620,"p":34,"veg":0,"keep":2,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#f08a5d",2],["chunk","#3f8f3a",5]]},"tip":"Frozen salmon fillets are the cheapest way to eat fish weekly."},"karaage":{"kcal":650,"p":32,"veg":0,"keep":2,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#c9893e",6],["strip","#c9dd9a",6]]},"tip":"Fry twice (2 minutes, rest, 1 minute) for extra crunch."},"zaru-soba":{"kcal":400,"p":14,"veg":1,"keep":1,"art":{"t":"plate","b":"#a0805a","tp":[["strip","#7a5a3a",9],["strip","#1f2a24",4],["ring","#5aa64a",5]]},"tip":"Buckwheat soba is more filling than wheat noodles."},"nasu-dengaku":{"kcal":380,"p":8,"veg":1,"keep":2,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#5b3a5e",5],["chunk","#c98b3e",3],["dot","#f3ead0",6]]},"tip":"Miso + honey glaze also works on tofu and salmon."},"shogayaki":{"kcal":640,"p":30,"veg":0,"keep":2,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#a8652e",5],["strip","#c9dd9a",6]]},"tip":"Thin pork loin from Mercadona is cheap and cooks in 3 minutes."},"shoyu-ramen":{"kcal":620,"p":32,"veg":0,"keep":1,"art":{"t":"soup","b":"#7a4426","tp":[["strip","#f0d48a",8],["chunk","#c98b4e",5],["egg","#f4a52a",1],["ring","#5aa64a",5]]},"tip":"Use leftover jammy eggs for this."},"teriyaki-tofu":{"kcal":520,"p":22,"veg":1,"keep":3,"art":{"t":"bowl","b":"#f5f1e6","tp":[["cube","#a8652e",6],["chunk","#3f8f3a",5],["dot","#f3ead0",6]]},"tip":"Same sauce as teriyaki chicken, at a lower cost."},"tuna-mayo-don":{"kcal":540,"p":26,"veg":0,"keep":1,"art":{"t":"bowl","b":"#f5f1e6","tp":[["chunk","#d9c9a5",5],["strip","#1f2a24",4],["ring","#5aa64a",5]]},"tip":"A store-cupboard dinner for the end of the month."},"bibimbap":{"kcal":620,"p":22,"veg":1,"keep":2,"art":{"t":"bowl","b":"#f5f1e6","tp":[["leaf","#3e8e41",4],["strip","#ee7f2d",4],["strip","#f2f0d8",5],["chunk","#8a6a4a",3],["egg","#f4a52a",1]]},"tip":"Use whatever veg is left in the fridge."},"kimchi-jjigae":{"kcal":420,"p":22,"veg":0,"keep":3,"art":{"t":"soup","b":"#b8331f","tp":[["leaf","#c4471f",5],["cube","#f2ead2",6],["ring","#5aa64a",5]]},"tip":"The older and sourer the kimchi, the better the stew."},"japchae":{"kcal":480,"p":12,"veg":1,"keep":2,"art":{"t":"plate","b":"#c9b08a","tp":[["strip","#7a5a3a",9],["leaf","#3e8e41",4],["strip","#ee7f2d",4],["chunk","#8a6a4a",3]]},"tip":"Good warm or at room temperature, so it travels well."},"tteokbokki":{"kcal":520,"p":10,"veg":1,"keep":1,"art":{"t":"plate","b":"#b8331f","tp":[["strip","#f6efdf",7],["egg","#f4a52a",1],["ring","#5aa64a",5]]},"tip":"Soak hard rice cakes in warm water 10 minutes first."},"gochujang-chicken":{"kcal":620,"p":34,"veg":0,"keep":3,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#c0432a",6],["strip","#c9dd9a",6]]},"tip":"Inspired by dakgalbi. Add rice cakes or cheese if you have them."},"kimchi-pancake":{"kcal":440,"p":12,"veg":0,"keep":1,"art":{"t":"plate","b":"#d9733a","tp":[["leaf","#c4471f",5],["ring","#5aa64a",5]]},"tip":"Uses up kimchi that's gone too sour to eat plain."},"sundubu":{"kcal":380,"p":20,"veg":0,"keep":2,"art":{"t":"soup","b":"#b8331f","tp":[["cube","#faf5e8",6],["egg","#f4a52a",1],["ring","#5aa64a",5]]},"tip":"Eat bubbling hot with a bowl of rice."},"bulgogi-bowl":{"kcal":680,"p":32,"veg":0,"keep":3,"art":{"t":"bowl","b":"#f5f1e6","tp":[["dot","#6a351c",12],["chunk","#5d9b4a",5],["ring","#5aa64a",5]]},"tip":"Minced beef gives the bulgogi taste for much less than sliced beef."},"doenjang-jjigae":{"kcal":360,"p":18,"veg":1,"keep":3,"art":{"t":"soup","b":"#d6a560","tp":[["cube","#f2ead2",6],["cube","#e6c27a",5],["chunk","#8fb35a",4]]},"tip":"Doenjang from a Korean shop is funkier; miso works fine."},"kimbap":{"kcal":520,"p":16,"veg":1,"keep":1,"art":{"t":"plate","b":"#f5f1e6","tp":[["dot","#1f2a24",4],["chunk","#f4c542",3],["strip","#ee7f2d",4],["chunk","#5d9b4a",5]]},"tip":"Brilliant packed lunch. Eat the same day."},"chana-masala":{"kcal":520,"p":18,"veg":1,"keep":4,"art":{"t":"soup","b":"#d9653b","tp":[["dot","#d9b36c",10],["leaf","#4caf50",4]]},"tip":"Makes 2–3 portions. It freezes perfectly."},"aloo-gobi":{"kcal":420,"p":10,"veg":1,"keep":3,"art":{"t":"plate","b":"#e6b53e","tp":[["cube","#e6c27a",5],["chunk","#f1ead2",5],["leaf","#4caf50",4]]},"tip":"Eat with chapati or rice."},"butter-chicken":{"kcal":720,"p":36,"veg":0,"keep":3,"art":{"t":"soup","b":"#e48a3c","tp":[["chunk","#c98b4e",5],["dot","#fbf3e0",4],["leaf","#4caf50",4]]},"tip":"Blend the sauce for a smooth restaurant texture."},"rajma":{"kcal":540,"p":20,"veg":1,"keep":4,"art":{"t":"soup","b":"#a8432a","tp":[["dot","#7a2e2a",10],["leaf","#4caf50",4]]},"tip":"Rajma chawal (with rice) is classic Punjabi comfort food."},"egg-curry":{"kcal":480,"p":20,"veg":1,"keep":3,"art":{"t":"soup","b":"#c9562b","tp":[["egg","#f4a52a",2],["leaf","#4caf50",4]]},"tip":"Cheap, high protein and very filling."},"veg-pulao":{"kcal":520,"p":12,"veg":1,"keep":3,"art":{"t":"plate","b":"#efd38a","tp":[["dot","#7cb342",6],["strip","#ee7f2d",4],["strip","#b5763a",3]]},"tip":"Everything in one pot, so very little washing up."},"khichdi":{"kcal":450,"p":18,"veg":1,"keep":3,"art":{"t":"soup","b":"#e9c56a","tp":[["dot","#d98a3a",6],["leaf","#4caf50",4]]},"tip":"India's comfort food. Gentle on the stomach."},"saag-paneer":{"kcal":560,"p":24,"veg":1,"keep":3,"art":{"t":"soup","b":"#4f7f2e","tp":[["cube","#fbf6ea",6]]},"tip":"Frozen spinach is cheaper and works just as well."},"keema-matar":{"kcal":620,"p":30,"veg":0,"keep":3,"art":{"t":"plate","b":"#f5f1e6","tp":[["dot","#7a3e22",12],["dot","#7cb342",6]]},"tip":"Great stuffed into a pitta or wrap the next day."},"aloo-matar":{"kcal":460,"p":10,"veg":1,"keep":3,"art":{"t":"soup","b":"#e8b552","tp":[["cube","#e6c27a",5],["dot","#7cb342",6],["leaf","#4caf50",4]]},"tip":"Vegan and costs under a euro."},"masala-omelette":{"kcal":340,"p":20,"veg":1,"keep":1,"art":{"t":"plate","b":"#f2c94c","tp":[["chunk","#d9402b",4],["leaf","#4caf50",4],["strip","#e8dcc0",3]]},"tip":"Have it with toast or chapati for a quick lunch."},"thai-green-curry":{"kcal":640,"p":26,"veg":0,"keep":3,"art":{"t":"soup","b":"#9db35a","tp":[["chunk","#c98b4e",5],["strip","#5d9b3a",5],["leaf","#3e8e41",4]]},"tip":"Curry paste keeps for months in the fridge once opened."},"thai-red-curry-tofu":{"kcal":620,"p":20,"veg":0,"keep":3,"art":{"t":"soup","b":"#c9562b","tp":[["cube","#f2ead2",6],["strip","#d63c2f",4],["strip","#5d9b3a",5]]},"tip":"Most red curry pastes contain shrimp. Check the label if you're vegetarian."},"pad-thai":{"kcal":620,"p":22,"veg":0,"keep":1,"art":{"t":"plate","b":"#e2a85a","tp":[["strip","#f6f1e2",9],["strip","#f2f0d8",5],["dot","#c9955a",5],["chunk","#a5d16b",1]]},"tip":"Add a spoon of ketchup if you don't have tamarind."},"pad-kra-pao":{"kcal":600,"p":30,"veg":0,"keep":2,"art":{"t":"bowl","b":"#f5f1e6","tp":[["dot","#8a5a3a",9],["leaf","#3e8e41",4],["egg","#f4a52a",1]]},"tip":"Thailand's favourite street lunch."},"tom-yum":{"kcal":260,"p":20,"veg":0,"keep":1,"art":{"t":"soup","b":"#e0743a","tp":[["crescent","#f08a5d",4],["chunk","#8a6a4a",3],["chunk","#d9402b",4],["leaf","#4caf50",4]]},"tip":"Light enough to pair with a side of rice or noodles."},"tom-kha":{"kcal":480,"p":24,"veg":0,"keep":2,"art":{"t":"soup","b":"#f1e3c3","tp":[["chunk","#c98b4e",5],["chunk","#8a6a4a",3],["leaf","#4caf50",4]]},"tip":"Galangal is traditional. Ginger is easier to find."},"khao-pad":{"kcal":520,"p":18,"veg":0,"keep":2,"art":{"t":"bowl","b":"#e9c46a","tp":[["chunk","#d9402b",4],["chunk","#f7d774",4],["chunk","#5d9b4a",5],["chunk","#a5d16b",1]]},"tip":"Squeezing lime over at the end is what makes it Thai."},"larb":{"kcal":380,"p":26,"veg":0,"keep":2,"art":{"t":"plate","b":"#cfe0a5","tp":[["dot","#8a5a3a",9],["leaf","#3e8e41",4],["strip","#e8dcc0",4]]},"tip":"Toast a spoon of raw rice and grind it for the traditional crunch."},"massaman":{"kcal":720,"p":30,"veg":0,"keep":4,"art":{"t":"soup","b":"#c9853a","tp":[["chunk","#c98b4e",5],["cube","#e6c27a",5],["dot","#c9955a",5]]},"tip":"Mild and rich. Even better the next day."},"pad-see-ew":{"kcal":600,"p":24,"veg":0,"keep":1,"art":{"t":"plate","b":"#7a4426","tp":[["strip","#c9a46a",8],["chunk","#c98b4e",5],["chunk","#3f8f3a",5]]},"tip":"Wide noodles from an Asian supermarket are best."},"pho-ga":{"kcal":480,"p":30,"veg":0,"keep":3,"art":{"t":"soup","b":"#efe6d2","tp":[["strip","#f6f1e2",9],["chunk","#c98b4e",5],["leaf","#3e8e41",4],["strip","#f2f0d8",5]]},"tip":"Freeze the broth in portions for instant pho."},"thit-kho":{"kcal":640,"p":26,"veg":0,"keep":4,"art":{"t":"bowl","b":"#f5f1e6","tp":[["chunk","#7a3a1a",5],["egg","#f4a52a",1]]},"tip":"Cheap pork shoulder becomes melt-in-the-mouth with slow cooking."},"banh-mi-bowl":{"kcal":580,"p":28,"veg":0,"keep":2,"art":{"t":"bowl","b":"#f5f1e6","tp":[["dot","#8a5a3a",9],["strip","#ee7f2d",4],["chunk","#5d9b4a",5],["leaf","#4caf50",4]]},"tip":"All the bánh mì flavour without needing fresh baguettes."},"summer-rolls":{"kcal":360,"p":16,"veg":1,"keep":1,"art":{"t":"plate","b":"#eaf0dc","tp":[["strip","#f4efe4",6],["strip","#ee7f2d",4],["leaf","#3e8e41",4],["cube","#f2ead2",6]]},"tip":"Fresh, crunchy and good for a hot day."},"tofu-vermicelli":{"kcal":520,"p":20,"veg":1,"keep":1,"art":{"t":"bowl","b":"#eef0e0","tp":[["strip","#f6f1e2",9],["cube","#c98b4e",6],["strip","#ee7f2d",4],["dot","#c9955a",5]]},"tip":"A veggie take on bún chay."},"lemongrass-chicken":{"kcal":600,"p":32,"veg":0,"keep":3,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#b8742e",5],["chunk","#5d9b4a",5],["strip","#d9e3a0",3]]},"tip":"Lemongrass freezes well. Buy a bundle at an Asian supermarket."},"nasi-goreng":{"kcal":520,"p":18,"veg":1,"keep":2,"art":{"t":"bowl","b":"#a8642e","tp":[["egg","#f4a52a",1],["chunk","#5d9b4a",5],["dot","#c0392b",5]]},"tip":"Kecap manis is sweet soy sauce. Mix soy sauce and honey if you can't find it."},"mie-goreng":{"kcal":560,"p":20,"veg":1,"keep":2,"art":{"t":"plate","b":"#a8642e","tp":[["strip","#f0d48a",8],["strip","#c9dd9a",6],["chunk","#f7d774",3]]},"tip":"Add leftover chicken or tofu for extra protein."},"chicken-satay":{"kcal":640,"p":36,"veg":0,"keep":2,"art":{"t":"plate","b":"#f5f1e6","tp":[["strip","#a8652e",5],["chunk","#5d9b4a",5],["chunk","#c98e4a",2]]},"tip":"No skewers needed. A pan works fine."},"gado-gado":{"kcal":480,"p":20,"veg":1,"keep":1,"art":{"t":"plate","b":"#eef0dc","tp":[["cube","#e6c27a",5],["egg","#f4a52a",1],["strip","#5d9b3a",5],["cube","#c98b4e",6]]},"tip":"Use any cooked vegetables you have."},"laksa":{"kcal":680,"p":26,"veg":0,"keep":1,"art":{"t":"soup","b":"#e0843a","tp":[["strip","#f6f1e2",9],["chunk","#c98b4e",5],["egg","#f4a52a",1],["strip","#f2f0d8",5]]},"tip":"Use red curry paste plus curry powder if you can't find laksa paste."},"kari-ayam":{"kcal":700,"p":30,"veg":0,"keep":4,"art":{"t":"soup","b":"#d97a2e","tp":[["chunk","#c98b4e",5],["cube","#e6c27a",5]]},"tip":"Curry powder from Mercadona works here."},"tempe-manis":{"kcal":520,"p":26,"veg":1,"keep":4,"art":{"t":"bowl","b":"#f5f1e6","tp":[["cube","#b88a4e",6],["dot","#c9955a",5],["dot","#c0392b",5]]},"tip":"Tempeh has more protein than tofu and keeps well in the fridge."},"chicken-adobo":{"kcal":620,"p":34,"veg":0,"keep":4,"art":{"t":"plate","b":"#f5f1e6","tp":[["chunk","#6a3a1e",4],["leaf","#6b8e3a",2]]},"tip":"The Philippines' national dish. It gets better over a few days."},"pancit-canton":{"kcal":540,"p":22,"veg":0,"keep":2,"art":{"t":"plate","b":"#ecd38a","tp":[["strip","#f0d48a",8],["chunk","#c98b4e",5],["strip","#c9dd9a",6],["strip","#ee7f2d",4]]},"tip":"Squeeze lemon over it, Filipino style."},"tortang-talong":{"kcal":360,"p":16,"veg":1,"keep":1,"art":{"t":"plate","b":"#c9a24a","tp":[["chunk","#6b4a5e",2],["strip","#f2c94c",4]]},"tip":"Serve with ketchup and rice."},"ginisang-monggo":{"kcal":420,"p":22,"veg":1,"keep":4,"art":{"t":"soup","b":"#9aa04a","tp":[["dot","#5d7a2a",10],["leaf","#3e8e41",4]]},"tip":"Mung beans cost very little and need no soaking."},"garlic-green-beans":{"kcal":120,"p":3,"veg":1,"keep":3,"art":{"t":"small","b":"#e6ecd5","tp":[["strip","#5d9b3a",5],["dot","#f3ead0",4]]}},"egg-drop-soup":{"kcal":90,"p":7,"veg":1,"keep":1,"art":{"t":"small","b":"#efd98a","tp":[["strip","#f7e9a8",6],["ring","#5aa64a",5]]}},"steamed-egg":{"kcal":140,"p":12,"veg":1,"keep":1,"art":{"t":"small","b":"#f4dc8a","tp":[["ring","#5aa64a",5]]}},"tamagoyaki":{"kcal":180,"p":12,"veg":1,"keep":2,"art":{"t":"plate","b":"#f5f1e6","tp":[["cube","#f4c542",4]]}},"hiyayakko":{"kcal":120,"p":10,"veg":1,"keep":1,"art":{"t":"small","b":"#f5f1e6","tp":[["cube","#fbf8ef",2],["ring","#5aa64a",5]]}},"wakame-salad":{"kcal":70,"p":2,"veg":1,"keep":2,"art":{"t":"small","b":"#dbe8c4","tp":[["leaf","#2f5d3a",5],["chunk","#5d9b4a",5],["dot","#f3ead0",6]]}},"goma-ae":{"kcal":110,"p":5,"veg":1,"keep":2,"art":{"t":"small","b":"#4f7f2e","tp":[["dot","#f3ead0",6],["leaf","#3e8e41",4]]}},"quick-kimchi":{"kcal":30,"p":1,"veg":1,"keep":14,"art":{"t":"small","b":"#e0743a","tp":[["leaf","#c4471f",5]]}},"gyeran-mari":{"kcal":170,"p":12,"veg":1,"keep":2,"art":{"t":"plate","b":"#f5f1e6","tp":[["cube","#f4c542",4],["strip","#ee7f2d",4]]}},"kongnamul":{"kcal":60,"p":4,"veg":1,"keep":3,"art":{"t":"small","b":"#f4f0dc","tp":[["strip","#f2f0d8",5],["ring","#5aa64a",5]]}},"gamja-jorim":{"kcal":180,"p":3,"veg":1,"keep":4,"art":{"t":"small","b":"#b8742e","tp":[["cube","#d9a04a",6],["dot","#f3ead0",6]]}},"raita":{"kcal":70,"p":4,"veg":1,"keep":2,"art":{"t":"small","b":"#f4f2ea","tp":[["chunk","#5d9b4a",5],["dot","#8a6a3a",4]]}},"chapati":{"kcal":120,"p":4,"veg":1,"keep":2,"art":{"t":"plate","b":"#e6c88e","tp":[["dot","#b5823e",6]]}},"jeera-rice":{"kcal":240,"p":4,"veg":1,"keep":3,"art":{"t":"small","b":"#f7f4ec","tp":[["dot","#ffffff",7],["dot","#8a6a3a",5]]}},"thai-cucumber-salad":{"kcal":40,"p":1,"veg":1,"keep":2,"art":{"t":"small","b":"#dbe8c4","tp":[["chunk","#5d9b4a",5],["dot","#c0392b",5]]}},"garlic-bok-choy":{"kcal":80,"p":3,"veg":1,"keep":1,"art":{"t":"plate","b":"#f5f1e6","tp":[["leaf","#4f8a3a",6],["strip","#e9f0d8",4]]}},"do-chua":{"kcal":30,"p":0,"veg":1,"keep":14,"art":{"t":"small","b":"#f4efdf","tp":[["strip","#ee7f2d",4],["strip","#fbf8ef",4]]}},"spring-rolls":{"kcal":220,"p":5,"veg":0,"keep":1,"art":{"t":"plate","b":"#f5f1e6","tp":[["strip","#d9a04a",4]]}},"coconut-rice":{"kcal":330,"p":5,"veg":1,"keep":2,"art":{"t":"small","b":"#f7f2e2","tp":[["dot","#ffffff",7]]}},"sesame-broccoli":{"kcal":90,"p":5,"veg":1,"keep":2,"art":{"t":"small","b":"#e6ecd5","tp":[["chunk","#3f8f3a",5],["dot","#f3ead0",6]]}}};
+BASE.push(...MORE); Object.assign(META,MORE_META);
+const meta=r=>r?(r.custom?{kcal:r.kcal||0,p:r.p||0,veg:0,keep:0}:(META[r.id]||{})):{};
+const WARE={Japan:["#2f4b6e","#1f3450"],China:["#eeeee8","#3a6aa3"],Korea:["#c09246","#8f6a2c"],India:["#b9683c","#8a4a28"],Thailand:["#8fb8a6","#5f8f7c"],Vietnam:["#e9e4d4","#4f7a5a"],Malaysia:["#c97b4a","#8e4f2c"],Indonesia:["#8a5a3b","#5e3b25"],Philippines:["#7a9cc6","#4a6c96"]};
+function hash(t){let h=2166136261;for(const c of t){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;}
+function rng(seed){return()=>{seed=(seed+0x6D2B79F5)|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+function art(r){
+  const a=(META[r.id]&&META[r.id].art)||{t:"bowl",b:"#e8dcc0",tp:[["chunk","#c98b4e",4],["dot","#7fb069",6],["dot","#e07a3f",4]]};
+  const [w1,w2]=WARE[r.cu]||["#d9d4c7","#9c968a"], rand=rng(hash(r.id)), cx=60;
+  let s='<svg viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="60" cy="82" rx="44" ry="5" fill="#000" opacity=".12"/>', cy, rx, ry;
+  if(a.t==="plate"){
+    s+=`<ellipse cx="60" cy="60" rx="54" ry="20" fill="${w2}"/><ellipse cx="60" cy="57" rx="54" ry="20" fill="${w1}"/><ellipse cx="60" cy="57" rx="40" ry="13" fill="#000" opacity=".06"/>`;
+    cy=52; rx=30; ry=9; s+=`<ellipse cx="60" cy="53" rx="36" ry="12" fill="${a.b}"/>`;
+  } else {
+    const k=a.t==="small"?0.74:1, top=a.t==="small"?42:34, RX=46*k, RY=14*k; cy=top;
+    s+=`<path d="M${60-RX} ${cy} Q${60-RX+4} ${cy+44*k} 60 ${cy+46*k} Q${60+RX-4} ${cy+44*k} ${60+RX} ${cy} Z" fill="${w1}"/>`;
+    s+=`<path d="M${60-RX+6} ${cy+10*k} Q${60-RX+12} ${cy+38*k} 60 ${cy+40*k}" fill="none" stroke="#fff" stroke-width="2" opacity=".18"/>`;
+    s+=`<ellipse cx="60" cy="${cy}" rx="${RX}" ry="${RY}" fill="${w2}"/><ellipse cx="60" cy="${cy}" rx="${RX-3}" ry="${RY-2.5}" fill="${a.b}"/>`;
+    if(a.t==="bowl"){ s+=`<ellipse cx="60" cy="${cy-3}" rx="${RX-9}" ry="${RY-3}" fill="${a.b}"/><ellipse cx="60" cy="${cy-3}" rx="${RX-9}" ry="${RY-3}" fill="#fff" opacity=".08"/>`; cy-=3; }
+    rx=RX-12; ry=RY-6;
+  }
+  (a.tp||[]).forEach(([shape,col,n])=>{for(let i=0;i<(n||5);i++){
+    const ang=rand()*Math.PI*2, d=n===1||shape==="egg"&&n<=2?(n===1?0:0.55):Math.sqrt(rand()), x=Math.round((cx+Math.cos(ang)*d*rx)*10)/10, y=Math.round((cy+Math.sin(ang)*d*ry)*10)/10, rot=Math.round(rand()*180);
+    if(shape==="dot") s+=`<circle cx="${x}" cy="${y}" r="${(1.5+rand()*1.5).toFixed(1)}" fill="${col}"/>`;
+    else if(shape==="ring") s+=`<circle cx="${x}" cy="${y}" r="2.3" fill="none" stroke="${col}" stroke-width="1.4"/>`;
+    else if(shape==="cube") s+=`<rect x="${x-3}" y="${y-2.5}" width="6" height="5" rx="1" fill="${col}" stroke="#000" stroke-opacity=".15" stroke-width=".6" transform="rotate(${rot%30-15} ${x} ${y})"/>`;
+    else if(shape==="leaf") s+=`<ellipse cx="${x}" cy="${y}" rx="4.5" ry="1.8" fill="${col}" transform="rotate(${rot} ${x} ${y})"/>`;
+    else if(shape==="strip") s+=`<rect x="${x-6}" y="${y-1}" width="12" height="2.2" rx="1.1" fill="${col}" transform="rotate(${rot} ${x} ${y})"/>`;
+    else if(shape==="egg") s+=`<ellipse cx="${x}" cy="${y}" rx="8" ry="5.5" fill="#fbf7ee" stroke="#000" stroke-opacity=".12" stroke-width=".6"/><circle cx="${x}" cy="${y}" r="3.4" fill="${col}"/>`;
+    else if(shape==="chunk") s+=`<ellipse cx="${x}" cy="${y}" rx="5.5" ry="3.6" fill="${col}" stroke="#000" stroke-opacity=".15" stroke-width=".6" transform="rotate(${rot%40-20} ${x} ${y})"/>`;
+    else if(shape==="crescent") s+=`<path d="M${x-8} ${y+2} Q${x} ${y-8} ${x+8} ${y+2} Q${x} ${y-1} ${x-8} ${y+2}Z" fill="${col}" stroke="#000" stroke-opacity=".18" stroke-width=".6"/>`;
+  }});
+  return s+"</svg>";
+}
+function thumb(r){const ph=(S.photos||{})[r.id]; return ph?`<img src="/_blob/${encodeURIComponent(ph)}" alt="">`:art(r);}
+function mealOf(v){return Array.isArray(v)?v:(v?[v]:[]);}
+// Stores. kind: asian | super | market
+const STORES=[
+ {id:"yang-kuang",name:"Yang Kuang",kind:"asian",area:"Passeig de Sant Joan 12–14 · Eixample",price:"€",note:"Big Chinese supermarket with low prices: fresh vegetables, tofu, noodles, frozen dumplings, coconut milk, miso. Also Korean and Japanese products."},
+ {id:"dayday-go",name:"DayDay Go",kind:"asian",area:"Ronda de Sant Pere · near Arc de Triomf",price:"€",note:"Very wide range from many Asian countries, with fresh produce, butcher and frozen sections."},
+ {id:"dong-fang",name:"Dong Fang – Extremo Oriente",kind:"asian",area:"Carrer de Balmes 6 · near Pl. Universitat",price:"€€",note:"Barcelona's first Asian grocer. Sauces, spices, teas, noodles, frozen dumplings, plus Indian pastes and spices."},
+ {id:"oriental-market",name:"Oriental Market",kind:"asian",area:"Carrer de Sicília · Eixample",price:"€",note:"Products from China, Korea, Japan, Vietnam, Thailand and the Philippines: noodles, seaweed, sauces, meat."},
+ {id:"yuen-tong",name:"Yuen Tong",kind:"asian",area:"Carrer de Nàpols · near Pl. Tetuan",price:"€",note:"Mostly Chinese, plus Indian, Japanese, Korean and Thai. Good for rice, legumes, condiments and vegetarian products."},
+ {id:"hankuk",name:"Hankuk",kind:"asian",area:"Carrer del Marquès de Sentmenat · near Sants station",price:"€",note:"Korean supermarket: kimchi, gochujang, frozen dumplings, snacks and ready meals.",tags:["korean"]},
+ {id:"tokyo-ya",name:"Tokyo-Ya",kind:"asian",area:"Carrer de Balmes",price:"€€",note:"Japanese supermarket since 1981: rice, miso, sauces, oils and tableware. Pricier, best for Japanese specifics.",tags:["japanese"]},
+ {id:"mercadona",name:"Mercadona / Lidl",kind:"super",q:"Mercadona Lidl",area:"Everywhere",price:"€",note:"Cheapest for everyday basics: rice, eggs, chicken, vegetables, tins, lentils, honey and spices. Soy sauce and coconut milk are usually stocked too."},
+ {id:"mercat",name:"Your local mercat municipal",kind:"market",q:"mercat municipal",area:"Every neighbourhood has one",price:"€",note:"Best for fresh vegetables, chicken, minced meat and eggs. Go in the morning for the best choice."}
+];
+const SPECIAL=new Set(["miso paste","gochujang","kimchi","doubanjiang","chili oil","rice vinegar","sesame oil","frozen gyoza","soft tofu","firm tofu","noodles","coconut milk","fish sauce","ginger","oyster sauce","hoisin sauce","green curry paste","red curry paste","massaman curry paste","tom yum paste","laksa paste","rice noodles","udon noodles","soba noodles","sweet potato noodles","rice cakes","rice paper","nori","kecap manis","tempeh","japanese curry roux","star anise","lemongrass","bok choy","paneer","dried wakame","frozen edamame","daikon radish","mung beans","sriracha","chili flakes"]);
+const SUPER_EXTRA=new Set(["coconut milk","soy sauce","ginger","noodles","firm tofu"]);
+const MEAT=new Set(["chicken thighs","minced pork","eggs"]);
+function covers(store,item){
+  const n=norm(item.name), c=item.cat||"o";
+  if(store.kind==="asian"){
+    if(store.tags&&store.tags.includes("korean")) return ["kimchi","gochujang","frozen gyoza","sesame oil","noodles","rice","soy sauce","firm tofu","soft tofu"].includes(n);
+    return SPECIAL.has(n)||["rice","soy sauce","spring onions","cabbage","chili oil"].includes(n)||(c==="s"&&store.id==="dong-fang");
+  }
+  if(store.kind==="super") return !SPECIAL.has(n)||SUPER_EXTRA.has(n);
+  if(store.kind==="market") return c==="v"||MEAT.has(n);
+  return false;
+}
+const STARTER_PANTRY=["rice","soy sauce","sesame oil","rice vinegar","cornstarch","curry powder","turmeric","garlic","ginger","noodles","red lentils","honey"];
+const uid8=()=>Math.random().toString(36).slice(2,10);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm=s=>String(s).trim().toLowerCase();
+const eur=n=>"€"+(Math.round(n*100)/100).toFixed(2);
+
+function defaultState(){
+  return {v:1,example:true,
+    plan:{"mon-l":["miso-soup","jammy-egg","steamed-rice"],"mon-d":["red-lentil-dal"],"tue-l":["@left"],"tue-d":["tofu-stir-fry"],"wed-l":["egg-fried-rice","smashed-cucumber"],"wed-d":["miso-noodle-soup"],"thu-d":["chickpea-curry"],"fri-l":["@left"],"fri-d":["gyoza-plate","edamame"],"sat-d":["teriyaki-chicken","miso-soup"],"sun-l":["peanut-noodles"]},
+    pantry:STARTER_PANTRY.map(n=>({id:uid8(),name:n,have:false})),
+    shop:[],custom:[],favs:[],stores:[],photos:{}};
+}
+function fix(st){["pantry","shop","custom","favs","stores"].forEach(k=>{if(!Array.isArray(st[k])) st[k]=[];}); if(!st.plan) st.plan={}; Object.keys(st.plan).forEach(k=>{st.plan[k]=mealOf(st.plan[k]); if(!st.plan[k].length) delete st.plan[k];}); if(!st.photos||typeof st.photos!=="object") st.photos={}; return st;}
+let S=defaultState(); S.shop=buildShop(S);
+let tab="week", filter="All";
+try{const h=location.hash.slice(1); if(["week","recipes","pantry","shop","stores"].includes(h)) tab=h;}catch(e){}
+
+const recipes=()=>BASE.concat(S.custom||[]);
+const R=id=>recipes().find(r=>r.id===id);
+function parse(s){const [q,n,c]=s.split("|");return {q,n,c:c||"o"};}
+const haveSet=()=>new Set(S.pantry.filter(p=>p.have).map(p=>norm(p.name)));
+
+function buildShop(st){
+  const counts={}, cats={};
+  Object.values(st.plan).flatMap(mealOf).forEach(id=>{const r=(BASE.concat(st.custom||[])).find(x=>x.id===id); if(!r) return;
+    r.ing.forEach(s=>{const i=parse(s), k=norm(i.n); counts[k]=(counts[k]||0)+1; cats[k]=i.c;});});
+  const have=new Set(st.pantry.filter(p=>p.have).map(p=>norm(p.name)));
+  const prevDone=new Set(st.shop.filter(x=>x.done&&x.auto).map(x=>norm(x.name)));
+  const auto=Object.keys(counts).filter(k=>!have.has(k)).sort().map(k=>({id:uid8(),name:k,cat:cats[k],n:counts[k],auto:true,done:prevDone.has(k)}));
+  return auto.concat(st.shop.filter(x=>!x.auto));
+}
+
+/* ---------- persistence ---------- */
+let assetsApi=null, db=null, ref=null, dirty=false, saving=false, saveTimer=null, mode="local";
+const LS="wokweek.v1";
+function setSync(t){document.getElementById("sync").textContent=t;}
+function save(){
+  dirty=true; S.example=false;
+  if(mode!=="db"){flush(); return;}
+  clearTimeout(saveTimer); saveTimer=setTimeout(flush,600);
+}
+addEventListener("pagehide",()=>{if(dirty) flush();});
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden"&&dirty) flush();});
+async function flush(){
+  if(saving){saveTimer=setTimeout(flush,400);return;}
+  if(mode==="db"&&ref){
+    saving=true; setSync("Saving…");
+    const snap=JSON.parse(JSON.stringify(S)); dirty=false;
+    try{await ref.set(snap); setSync("Saved");}
+    catch(e){ if(e&&e.code==="unavailable"){setTimeout(()=>{dirty=true;flush();},1500+Math.random()*1000);} else setSync("Not saved"); }
+    saving=false;
+  } else {
+    try{localStorage.setItem(LS,JSON.stringify(S)); setSync("Saved on this device");}catch(e){setSync("Not saved");}
+    dirty=false;
+  }
+}
+function loadLocal(){try{const t=localStorage.getItem(LS); if(t){S=fix(JSON.parse(t)); return true;}}catch(e){} return false;}
+loadLocal();
+
+async function connect(){
+  if(!window.claude||!window.claude.use){setSync("Saved on this device");return;}
+  try{
+    const [d,u]=await Promise.all([claude.use("db"),claude.use("user")]);
+    const id=u?await u.id():null;
+    claude.use("assets").then(a=>{assetsApi=a;}).catch(()=>{});
+    if(!d||!id){setSync("Saved on this device");return;}
+    db=d; ref=db.doc("data/users/"+id+"/state"); mode="db"; setSync("Syncing…");
+    const t=setTimeout(()=>setSync("Offline"),10000);
+    ref.onSnapshot(snap=>{
+      if(!snap.metadata.fromCache){clearTimeout(t); if(!saving&&!dirty) setSync("Synced");}
+      if(dirty||saving||snap.metadata.hasPendingWrites) return;
+      if(snap.exists){const v=snap.data(); S=fix(JSON.parse(JSON.stringify(v))); render();}
+    },err=>{clearTimeout(t); setSync("Offline");});
+  }catch(e){setSync("Saved on this device");}
+}
+
+/* ---------- render ---------- */
+const view=document.getElementById("view");
+function render(){
+  document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-current",b.dataset.tab===tab?"page":"false"));
+  const left=S.shop.filter(x=>!x.done).length;
+  document.getElementById("shopBadge").textContent=left?"("+left+")":"";
+  ({week:renderWeek,recipes:renderRecipes,pantry:renderPantry,shop:renderShop,stores:renderStores})[tab]();
+}
+
+const allStores=()=>STORES.concat(S.stores||[]);
+function ranked(){
+  const need=S.shop.filter(x=>!x.done);
+  return allStores().map(s=>({s,items:need.filter(i=>covers(s,i)),fav:(S.favs||[]).includes(s.id)}))
+    .sort((a,b)=>(b.fav-a.fav)||(b.items.length-a.items.length));
+}
+const mapsUrl=s=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((s.q||s.name+" "+s.area.split("·")[0])+" Barcelona");
+const KIND={asian:"Asian supermarket",super:"Supermarket",market:"Fresh market"};
+function renderStores(){
+  const need=S.shop.filter(x=>!x.done).length, list=ranked();
+  view.innerHTML=`<div class="section">
+    <div><h2>Where to buy</h2><p class="lede">Ranked by how much of your shopping list each place covers. Star the ones near you.</p></div>
+    <div class="note">Usual plan: one trip to an Asian supermarket for sauces, tofu and noodles (they last for months), and fresh food from Mercadona or your mercat each week.</div>
+    <div class="rlist">${list.map(({s,items,fav})=>`<div class="scard${fav?" fav":""}">
+      <div class="shead"><div><h3>${esc(s.name)}</h3><span class="tag ${s.kind==="asian"?"asian":""}">${KIND[s.kind]||"Store"}</span> <span class="meta">${esc(s.price||"")}</span></div>
+        <button class="star" aria-pressed="${fav}" aria-label="${fav?"Unstar":"Star"} ${esc(s.name)}" data-fav="${esc(s.id)}">${fav?"★":"☆"}</button></div>
+      <p>${esc(s.area)}</p>
+      ${need?`<div class="cover"><div class="bar"><i style="width:${Math.round(items.length/need*100)}%"></i></div><span><b>${items.length}/${need}</b> items</span></div>`:""}
+      <p>${esc(s.note||"")}</p>
+      <div class="row">${need&&items.length?`<button class="btn small" data-store="${esc(s.id)}">See my items here</button>`:""}
+        <a class="link" href="${mapsUrl(s)}" target="_blank" rel="noopener">Open in Maps ↗</a>
+        ${s.custom?`<button class="btn small ghost" data-sdelstore="${esc(s.id)}">Remove</button>`:""}</div>
+    </div>`).join("")}</div>
+    <button class="btn ghost" id="addStore">+ Add a shop you like</button>
+    <p class="lede">Store details come from local guides and can change. Check opening hours in Maps before you go.</p>
+  </div>`;
+  view.querySelectorAll("[data-fav]").forEach(b=>b.onclick=()=>{const id=b.dataset.fav; S.favs=S.favs.includes(id)?S.favs.filter(x=>x!==id):S.favs.concat(id); save(); render();});
+  view.querySelectorAll("[data-store]").forEach(b=>b.onclick=()=>openStoreItems(b.dataset.store));
+  view.querySelectorAll("[data-sdelstore]").forEach(b=>{let armed=false; b.onclick=()=>{if(!armed){armed=true;b.textContent="Tap again";return;} S.stores=S.stores.filter(x=>x.id!==b.dataset.sdelstore); save(); render();};});
+  document.getElementById("addStore").onclick=openNewStore;
+}
+
+function slotLabel(v){
+  const m=mealOf(v);
+  if(!m.length) return {t:"Tap to plan",c:"empty",rs:[]};
+  if(m[0]==="@left") return {t:"Leftovers",c:"filled left",rs:[]};
+  if(m[0]==="@out") return {t:"Out / skip",c:"filled",rs:[]};
+  const rs=m.map(R).filter(Boolean); if(!rs.length) return {t:"Tap to plan",c:"empty",rs:[]};
+  const cost=rs.reduce((a,r)=>a+r.cost,0), kcal=rs.reduce((a,r)=>a+(meta(r).kcal||0),0);
+  return {t:rs.map(r=>meta(r).short||r.name).join(" + "),c:"filled",rs,sub:eur(cost)+(kcal?" · "+kcal+" kcal":"")};
+}
+function renderWeek(){
+  const vals=Object.values(S.plan).map(mealOf).filter(m=>m.length);
+  const flat=vals.flat(), planned=vals.length, cooked=flat.filter(id=>R(id)&&!R(id).side).length;
+  const cost=flat.reduce((a,id)=>a+(R(id)?R(id).cost:0),0)+flat.filter(v=>v==="@left").length*0.9;
+  const todayIdx=(new Date().getDay()+6)%7;
+  view.innerHTML=`<div class="section">
+    <div><h2>This week</h2><p class="lede">Lunch and dinner. Tap a meal to pick one dish or a combo.</p></div>
+    <div class="stats">
+      <div class="stat">Planned <b>${planned}/14</b></div>
+      <div class="stat">Main dishes <b>${cooked}</b></div>
+      <div class="stat">Est. food cost <b>${eur(cost)}</b></div>
+    </div>
+    ${S.example?`<div class="note">This is an example week. Tap any meal to change it, or <button class="btn small ghost" id="clearWeek">start empty</button></div>`:""}
+    <div class="days">${DAYS.map(([k,n],i)=>`<div class="day${i===todayIdx?" today":""}">
+      <div class="dname">${n}${i===todayIdx?"<small>TODAY</small>":""}</div>
+      <div class="slots">${[["l","Lunch"],["d","Dinner"]].map(([s,lab])=>{const L=slotLabel(S.plan[k+"-"+s]);
+        return `<button class="slot ${L.c}" data-slot="${k}-${s}"><span class="lbl">${lab}</span><span class="meal">${esc(L.t)}</span>${L.sub?`<span class="cost">${L.sub}</span>`:""}${L.rs.length?`<span class="minis">${L.rs.map(r=>`<span class="mini thumb">${thumb(r)}</span>`).join("")}</span>`:""}</button>`}).join("")}</div>
+    </div>`).join("")}</div>
+    <div class="row"><button class="btn" id="toShop">Make shopping list</button><button class="btn ghost" id="clearWeek2">Clear week</button></div>
+  </div>`;
+  view.querySelectorAll("[data-slot]").forEach(b=>b.onclick=()=>openPicker(b.dataset.slot));
+  const cw=()=>{S.plan={}; save(); render();};
+  const c1=document.getElementById("clearWeek"); if(c1) c1.onclick=cw;
+  document.getElementById("clearWeek2").onclick=cw;
+  document.getElementById("toShop").onclick=()=>{S.shop=buildShop(S); save(); go("shop");};
+}
+
+let query="";
+function matchRecipe(r,q){if(!q) return true; q=norm(q); return norm(r.name).includes(q)||norm(r.cu).includes(q)||r.ing.some(i=>norm(parse(i).n).includes(q));}
+function renderRecipes(){
+  const cus=["All","Mains","Sides","Vegetarian","Under 15 min","Under €1"].concat([...new Set(recipes().map(r=>r.cu))]);
+  view.innerHTML=`<div class="section">
+    <div><h2>Recipes</h2><p class="lede">${recipes().length} dishes. Mains first, cheapest first. Cost and calories are per serving and approximate.</p></div>
+    <input class="search" id="rq" type="search" placeholder="Search a dish or ingredient, e.g. tofu" value="${esc(query)}" autocomplete="off">
+    <div class="chips">${cus.map(c=>`<button class="chip" aria-pressed="${c===filter}" data-cu="${esc(c)}">${esc(c)}</button>`).join("")}</div>
+    <p class="meta" id="rcount" style="margin:0"></p>
+    <div class="rlist" id="rlist"></div>
+    <button class="btn ghost" id="addRecipe">+ Add your own recipe</button>
+  </div>`;
+  const draw=()=>{
+    const list=recipes().filter(r=>(filter==="All"||(filter==="Mains"&&!r.side)||(filter==="Sides"&&r.side)||(filter==="Vegetarian"&&meta(r).veg)||(filter==="Under 15 min"&&r.min<=15)||(filter==="Under €1"&&r.cost<1)||r.cu===filter)&&matchRecipe(r,query)).sort((a,b)=>(!!a.side-!!b.side)||a.cost-b.cost);
+    document.getElementById("rcount").textContent=list.length+(list.length===1?" recipe":" recipes");
+    document.getElementById("rlist").innerHTML=list.length?list.map(r=>`<button class="rcard" data-r="${esc(r.id)}">
+      <span class="thumb">${thumb(r)}</span><span class="rbody"><h3>${esc(r.name)}</h3>
+      <span class="meta">${r.side?"Side · ":""}${esc(r.cu)} · ${r.min} min${meta(r).kcal?" · "+meta(r).kcal+" kcal":""}</span></span><span class="price">${eur(r.cost)}</span></button>`).join(""):`<div class="empty-state">No recipes match. Try another word or tap All.</div>`;
+    document.querySelectorAll("#rlist [data-r]").forEach(b=>b.onclick=()=>openRecipe(b.dataset.r));
+  };
+  draw();
+  const rq=document.getElementById("rq"); rq.oninput=()=>{query=rq.value; draw();};
+  view.querySelectorAll("[data-cu]").forEach(b=>b.onclick=()=>{filter=b.dataset.cu; view.querySelectorAll("[data-cu]").forEach(x=>x.setAttribute("aria-pressed",x===b)); draw();});
+  document.getElementById("addRecipe").onclick=openNewRecipe;
+}
+
+function renderPantry(){
+  const have=S.pantry.filter(p=>p.have).length;
+  view.innerHTML=`<div class="section">
+    <div><h2>Pantry</h2><p class="lede">Tick what you have at home. Ticked items stay off your shopping list.</p></div>
+    <div class="stats"><div class="stat">In stock <b>${have}/${S.pantry.length}</b></div></div>
+    <form class="add" id="pAdd"><input id="pIn" placeholder="Add a staple, e.g. fish sauce" autocomplete="off"><button class="btn small">Add</button></form>
+    ${S.pantry.length?`<ul class="items">${S.pantry.map(p=>`<li><label><input type="checkbox" data-p="${p.id}" ${p.have?"checked":""}><span class="txt">${esc(p.name)}</span></label><button class="x" aria-label="Remove ${esc(p.name)}" data-pdel="${p.id}">×</button></li>`).join("")}</ul>`:`<div class="empty-state">No staples yet. Add soy sauce, rice and garlic to start.</div>`}
+  </div>`;
+  view.querySelectorAll("[data-p]").forEach(c=>c.onchange=()=>{const p=S.pantry.find(x=>x.id===c.dataset.p); p.have=c.checked; save(); render();});
+  view.querySelectorAll("[data-pdel]").forEach(b=>b.onclick=()=>{S.pantry=S.pantry.filter(x=>x.id!==b.dataset.pdel); save(); render();});
+  document.getElementById("pAdd").onsubmit=e=>{e.preventDefault(); const v=document.getElementById("pIn").value.trim(); if(!v) return;
+    S.pantry.unshift({id:uid8(),name:norm(v),have:true}); save(); render();};
+}
+
+function renderShop(){
+  const groups={}; S.shop.forEach(x=>{(groups[x.cat||"o"]=groups[x.cat||"o"]||[]).push(x);});
+  const left=S.shop.filter(x=>!x.done).length;
+  view.innerHTML=`<div class="section">
+    <div><h2>Shopping list</h2><p class="lede">Built from your week, minus what's in the pantry.</p></div>
+    <div class="row"><div class="stat">To buy <b>${left}</b></div>
+      <button class="btn small" id="rebuild">Rebuild from week</button>
+      <button class="btn small ghost" id="clearDone">Clear ticked</button></div>
+    ${left?(()=>{const top=ranked().sort((a,b)=>b.items.length-a.items.length)[0]; return top&&top.items.length?`<button class="where" id="whereGo"><span>Best single stop: <b>${esc(top.s.name)}</b> has ${top.items.length} of ${left} items</span><span class="link">Stores →</span></button>`:"";})():""}
+    <form class="add" id="sAdd"><input id="sIn" placeholder="Add an item" autocomplete="off"><button class="btn small">Add</button></form>
+    ${S.shop.length?Object.keys(CAT).filter(c=>groups[c]).map(c=>`<div class="group"><h4>${CAT[c]}</h4><ul class="items">${groups[c].map(x=>`<li class="${x.done?"done":""}">
+      <label><input type="checkbox" data-s="${x.id}" ${x.done?"checked":""}><span class="txt">${esc(x.name)}${x.n?` <span class="sub">· ${x.n} meal${x.n>1?"s":""}</span>`:""}</span></label>
+      <button class="x" aria-label="Remove ${esc(x.name)}" data-sdel="${x.id}">×</button></li>`).join("")}</ul></div>`).join(""):`<div class="empty-state">Nothing to buy. Plan some meals, then tap Rebuild.</div>`}
+    <p class="lede">Tip: ticking an item here doesn't add it to the pantry. Do that once you're home.</p>
+  </div>`;
+  view.querySelectorAll("[data-s]").forEach(c=>c.onchange=()=>{const x=S.shop.find(i=>i.id===c.dataset.s); x.done=c.checked; save(); render();});
+  view.querySelectorAll("[data-sdel]").forEach(b=>b.onclick=()=>{S.shop=S.shop.filter(i=>i.id!==b.dataset.sdel); save(); render();});
+  const wg=document.getElementById("whereGo"); if(wg) wg.onclick=()=>go("stores");
+  document.getElementById("rebuild").onclick=()=>{S.shop=buildShop(S); save(); render();};
+  document.getElementById("clearDone").onclick=()=>{S.shop=S.shop.filter(i=>!i.done); save(); render();};
+  document.getElementById("sAdd").onsubmit=e=>{e.preventDefault(); const v=document.getElementById("sIn").value.trim(); if(!v) return;
+    S.shop.unshift({id:uid8(),name:norm(v),cat:"o",done:false}); save(); render();};
+}
+
+/* ---------- sheets ---------- */
+const root=document.getElementById("sheetRoot");
+function sheet(html,bind,foot){
+  root.innerHTML=`<div class="scrim" id="scrim"><div class="sheet-wrap" role="dialog" aria-modal="true"><div class="sheet"${foot?' style="padding-bottom:16px"':""}>${html}</div>${foot||""}</div></div>`;
+  document.body.style.overflow="hidden";
+  const s=document.getElementById("scrim");
+  s.onclick=e=>{if(e.target===s) close();};
+  root.querySelectorAll("[data-close]").forEach(b=>b.onclick=close);
+  bind&&bind(root);
+}
+function close(){root.innerHTML=""; document.body.style.overflow="";}
+document.addEventListener("keydown",e=>{if(e.key==="Escape") close();});
+
+function openPicker(slot){
+  const [d,sl]=slot.split("-"); const day=DAYS.find(x=>x[0]===d)[1];
+  let sel=mealOf(S.plan[slot]).filter(id=>R(id));
+  const all=recipes().slice().sort((a,b)=>a.cost-b.cost);
+  const row=r=>`<button class="pick${sel.includes(r.id)?" on":""}" aria-pressed="${sel.includes(r.id)}" data-t="${esc(r.id)}" data-q="${esc(norm(r.name+" "+r.cu+" "+r.ing.map(i=>parse(i).n).join(" ")))}"><span class="pthumb thumb">${thumb(r)}</span><span class="pname">${esc(r.name)}</span><span class="meta">${eur(r.cost)}</span></button>`;
+  sheet(`<div class="sheet-head"><div><h2>${day} ${sl==="l"?"lunch":"dinner"}</h2><p class="lede">Pick one dish, or several for a combo like miso soup + jammy egg + rice.</p></div><button class="x" data-close aria-label="Close">×</button></div>
+    <input class="search" id="pq" type="search" placeholder="Search ${all.length} dishes" autocomplete="off">
+    <h4 class="ghead">Sides</h4><div class="picks">${all.filter(r=>r.side).map(row).join("")}</div>
+    <h4 class="ghead">Mains</h4><div class="picks">${all.filter(r=>!r.side).map(row).join("")}</div>
+    <h4 class="ghead">Other</h4><div class="picks">
+      <button class="pick special" data-sp="@left"><span class="pname">Leftovers</span><span class="meta">€0.90 avg</span></button>
+      <button class="pick special" data-sp="@out"><span class="pname">Out / skip</span></button>
+      <button class="pick special" data-sp=""><span class="pname">Clear this meal</span></button></div>`,el=>{
+    const upd=()=>{const rs=sel.map(R).filter(Boolean), c=rs.reduce((a,r)=>a+r.cost,0), k=rs.reduce((a,r)=>a+(meta(r).kcal||0),0), p=rs.reduce((a,r)=>a+(meta(r).p||0),0);
+      el.querySelector("#cbWhat").innerHTML=rs.length?`${esc(rs.map(r=>meta(r).short||r.name).join(" + "))}<div class="meta">${eur(c)} · ${k} kcal · ${p} g protein</div>`:`<span class="meta">Nothing picked yet</span>`;};
+    const pq=el.querySelector("#pq"); pq.oninput=()=>{const q=norm(pq.value); el.querySelectorAll("[data-q]").forEach(b=>{b.hidden=!!q&&!b.dataset.q.includes(q);}); el.querySelectorAll(".picks").forEach(g=>{const h=g.previousElementSibling; const any=[...g.children].some(c=>!c.hidden); g.hidden=!any; if(h&&h.classList.contains("ghead")) h.hidden=!any;});};
+    el.querySelectorAll("[data-t]").forEach(b=>b.onclick=()=>{const id=b.dataset.t; sel=sel.includes(id)?sel.filter(x=>x!==id):sel.concat(id); const on=sel.includes(id); b.classList.toggle("on",on); b.setAttribute("aria-pressed",on); upd();});
+    el.querySelectorAll("[data-sp]").forEach(b=>b.onclick=()=>{const v=b.dataset.sp; if(v) S.plan[slot]=[v]; else delete S.plan[slot]; save(); close(); render();});
+    el.querySelector("#cbSave").onclick=()=>{if(sel.length) S.plan[slot]=sel.slice(); else delete S.plan[slot]; save(); close(); render();};
+    upd();
+  },`<div class="combo-bar"><div class="what" id="cbWhat"></div><button class="btn" id="cbSave">Save</button></div>`);
+}
+
+function openRecipe(id){
+  const r=R(id); if(!r) return; const have=haveSet(), m=meta(r);
+  const missing=r.ing.map(parse).filter(i=>!have.has(norm(i.n)));
+  const ph=(S.photos||{})[r.id];
+  sheet(`<div class="sheet-head"><div><h2>${esc(r.name)}</h2><div class="tags" style="margin-top:6px"><span class="tag">${esc(r.cu)}</span>${r.side?'<span class="tag">Side</span>':""}${m.veg?'<span class="tag veg">Vegetarian</span>':""}</div></div><button class="x" data-close aria-label="Close">×</button></div>
+    <div class="hero">${ph?`<img src="/_blob/${encodeURIComponent(ph)}" alt="Your photo of ${esc(r.name)}">`:art(r)}</div>
+    <div class="facts">
+      <div class="fact"><b>${r.min}′</b><span>Time</span></div>
+      <div class="fact"><b>${eur(r.cost)}</b><span>Cost</span></div>
+      <div class="fact"><b>${m.kcal||"–"}</b><span>kcal</span></div>
+      <div class="fact"><b>${m.p?m.p+"g":"–"}</b><span>Protein</span></div>
+      <div class="fact"><b>${m.keep?m.keep+"d":"–"}</b><span>Keeps</span></div>
+    </div>
+    ${m.tip?`<div class="note">${esc(m.tip)}</div>`:""}
+    <div><h4 class="ghead" style="margin:0 0 6px">Ingredients · 1 serving</h4><ul class="ing">${r.ing.map(parse).map(i=>`<li><span>${have.has(norm(i.n))?'<span class="have">✓ </span>':""}${esc(i.n)}</span><span class="q">${esc(i.q)}</span></li>`).join("")}</ul></div>
+    <div><h4 class="ghead" style="margin:0 0 6px">Method</h4><ol>${r.steps.map(x=>`<li>${esc(x)}</li>`).join("")}</ol></div>
+    <p class="meta" id="phMsg" style="margin:0"></p>
+    <div class="row">
+      <button class="btn" id="addMissing" ${missing.length?"":"disabled"}>${missing.length?`Add ${missing.length} missing to list`:"You have everything"}</button>
+      ${assetsApi?`<label class="btn ghost photo-btn">${ph?"Change photo":"Add my photo"}<input type="file" accept="image/*" id="phIn"></label>`:""}
+      ${ph?`<button class="btn ghost" id="phDel">Remove photo</button>`:""}
+      ${r.custom?`<button class="btn ghost" id="delR">Delete recipe</button>`:""}
+    </div>
+    <p class="lede" style="margin:0">Picture is an illustration. Add your own photo after you cook it. Nutrition is an estimate.</p>`,el=>{
+    const am=el.querySelector("#addMissing"); if(am) am.onclick=()=>{
+      const inList=new Set(S.shop.map(x=>norm(x.name)));
+      missing.forEach(i=>{if(!inList.has(norm(i.n))) S.shop.unshift({id:uid8(),name:norm(i.n),cat:i.c,done:false});});
+      save(); am.textContent="Added to shopping list"; am.disabled=true; render();};
+    const pi=el.querySelector("#phIn"); if(pi) pi.onchange=async()=>{
+      const f=pi.files&&pi.files[0]; if(!f) return; const msg=el.querySelector("#phMsg");
+      msg.textContent="Uploading…";
+      let blob=f;
+      try{const bmp=await createImageBitmap(f); const k=Math.min(1,1400/Math.max(bmp.width,bmp.height)); const c=document.createElement("canvas"); c.width=Math.round(bmp.width*k); c.height=Math.round(bmp.height*k); c.getContext("2d").drawImage(bmp,0,0,c.width,c.height); blob=await new Promise(res=>c.toBlob(b=>res(b||f),"image/jpeg",0.82));}catch(e){blob=f;}
+      if(blob.size>20*1024*1024){msg.textContent="That photo is too large. Pick a smaller one.";return;}
+      try{const res=await assetsApi.upload(blob); S.photos=Object.assign({},S.photos,{[r.id]:res.id}); save(); render(); openRecipe(id);}
+      catch(e){msg.textContent="Couldn't upload the photo. Try again or pick a different image.";}
+    };
+    const pd=el.querySelector("#phDel"); if(pd) pd.onclick=()=>{const p2=Object.assign({},S.photos); delete p2[r.id]; S.photos=p2; save(); render(); openRecipe(id);};
+    const dr=el.querySelector("#delR"); if(dr){let armed=false; dr.onclick=()=>{
+      if(!armed){armed=true; dr.textContent="Tap again to delete"; return;}
+      S.custom=S.custom.filter(x=>x.id!==id); Object.keys(S.plan).forEach(k=>{S.plan[k]=mealOf(S.plan[k]).filter(x=>x!==id); if(!S.plan[k].length) delete S.plan[k];}); save(); close(); render();};}
+  });
+}
+
+function openNewRecipe(){
+  sheet(`<div class="sheet-head"><h2>New recipe</h2><button class="x" data-close aria-label="Close">×</button></div>
+    <form class="f" id="nr">
+      <label>Name<input id="nrName" required placeholder="e.g. Grandma's congee"></label>
+      <div class="two">
+        <label>Cuisine<input id="nrCu" placeholder="Vietnam"></label>
+        <label>Minutes<input id="nrMin" type="number" min="1" value="20"></label>
+        <label>€ / serving<input id="nrCost" type="number" min="0" step="0.1" value="1.5"></label>
+      </div>
+      <div class="two">
+        <label>kcal (optional)<input id="nrKcal" type="number" min="0" placeholder="450"></label>
+        <label>Protein g<input id="nrP" type="number" min="0" placeholder="20"></label>
+        <label>Type<select id="nrSide"><option value="">Main</option><option value="1">Side</option></select></label>
+      </div>
+      <label>Ingredients, one per line: amount, then name<textarea id="nrIng" rows="5" placeholder="1 cup rice&#10;2 eggs&#10;1 tbsp fish sauce"></textarea></label>
+      <label>Steps, one per line<textarea id="nrSteps" rows="5" placeholder="Rinse the rice&#10;Simmer 40 minutes"></textarea></label>
+      <button class="btn">Save recipe</button>
+    </form>`,el=>{
+    el.querySelector("#nr").onsubmit=e=>{e.preventDefault();
+      const lines=v=>v.split("\n").map(x=>x.trim()).filter(Boolean);
+      const ing=lines(el.querySelector("#nrIng").value).map(l=>{const m=l.match(/^([\d½¼¾.,\/]+\s*(?:g|kg|ml|l|cup|cups|tbsp|tsp|tin|tins|clove|cloves|handful|pinch)?\.?)\s+(.+)$/i); return m?`${m[1]}|${norm(m[2])}|o`:`|${norm(l)}|o`;});
+      const r={id:"c-"+uid8(),custom:true,name:el.querySelector("#nrName").value.trim(),cu:el.querySelector("#nrCu").value.trim()||"Other",
+        min:+el.querySelector("#nrMin").value||20,cost:+el.querySelector("#nrCost").value||0,kcal:+el.querySelector("#nrKcal").value||0,p:+el.querySelector("#nrP").value||0,side:!!el.querySelector("#nrSide").value,ing,steps:lines(el.querySelector("#nrSteps").value)};
+      if(!r.name) return;
+      S.custom=(S.custom||[]).concat(r); save(); close(); filter="All"; render();};
+  });
+}
+
+function openStoreItems(id){
+  const s=allStores().find(x=>x.id===id); if(!s) return;
+  const draw=()=>{
+    const items=S.shop.filter(i=>covers(s,i));
+    sheet(`<div class="sheet-head"><div><h2>${esc(s.name)}</h2><p class="meta" style="margin:4px 0 0">${esc(s.area)}</p></div><button class="x" data-close aria-label="Close">×</button></div>
+      <p class="lede" style="margin:0">Your items you can usually find here. Tick them as you shop.</p>
+      <ul class="items">${items.map(x=>`<li class="${x.done?"done":""}"><label><input type="checkbox" data-si="${x.id}" ${x.done?"checked":""}><span class="txt">${esc(x.name)}</span></label></li>`).join("")}</ul>
+      <a class="link" href="${mapsUrl(s)}" target="_blank" rel="noopener">Open in Maps ↗</a>`,el=>{
+      el.querySelectorAll("[data-si]").forEach(c=>c.onchange=()=>{const x=S.shop.find(i=>i.id===c.dataset.si); x.done=c.checked; save(); render(); draw();});
+    });
+  };
+  draw();
+}
+
+function openNewStore(){
+  sheet(`<div class="sheet-head"><h2>Add a shop</h2><button class="x" data-close aria-label="Close">×</button></div>
+    <form class="f" id="ns">
+      <label>Name<input id="nsName" required placeholder="e.g. Fruteria on my street"></label>
+      <label>Where<input id="nsArea" placeholder="Street or neighbourhood"></label>
+      <label>Type<select id="nsKind"><option value="asian">Asian supermarket</option><option value="super">Supermarket</option><option value="market">Fresh market / greengrocer</option></select></label>
+      <label>Notes<textarea id="nsNote" rows="3" placeholder="Opening hours, what's good there"></textarea></label>
+      <button class="btn">Save shop</button>
+    </form>`,el=>{
+    el.querySelector("#ns").onsubmit=e=>{e.preventDefault();
+      const name=el.querySelector("#nsName").value.trim(); if(!name) return;
+      const st={id:"s-"+uid8(),custom:true,name,area:el.querySelector("#nsArea").value.trim()||"Barcelona",kind:el.querySelector("#nsKind").value,price:"",note:el.querySelector("#nsNote").value.trim()};
+      S.stores=S.stores.concat(st); S.favs=S.favs.concat(st.id); save(); close(); render();};
+  });
+}
+
+function go(t){tab=t; try{history.replaceState(null,"","#"+t);}catch(e){} window.scrollTo(0,0); render();}
+document.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>go(b.dataset.tab));
+window.addEventListener("hashchange",()=>{const h=location.hash.slice(1); if(["week","recipes","pantry","shop","stores"].includes(h)){tab=h;render();}});
+render(); connect();
+})();
+</script>
+
+</body></html>
